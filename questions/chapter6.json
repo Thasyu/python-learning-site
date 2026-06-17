@@ -1,0 +1,242 @@
+[
+  {
+    "id": "chapter6_d1_missing_colon_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 1,
+    "generator_type": "debug_missing_colon",
+    "template": "次のコードを修正して、0から{end}までを出力せよ",
+    "end_min": 1,
+    "end_max": 10,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["コロンを確認する"],
+    "explanation": "for文の末尾にはコロンが必要です。"
+  },
+  {
+    "id": "chapter6_d1_missing_quote_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 1,
+    "generator_type": "debug_missing_quote",
+    "template": "次のコードを修正して、{text}を出力せよ",
+    "string_candidates": ["Hello", "Python", "Debug", "Text", "OK"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "print_argument_kind",
+        "expected_kind": "string"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["クォートを確認する"],
+    "explanation": "文字列はクォートで囲む必要があります。"
+  },
+  {
+    "id": "chapter6_d1_missing_parenthesis_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 1,
+    "generator_type": "debug_missing_parenthesis",
+    "template": "次のコードを修正して、{answer}を出力せよ",
+    "a_min": 1,
+    "a_max": 30,
+    "b_min": 1,
+    "b_max": 30,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "print"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["閉じ括弧を確認する"],
+    "explanation": "print()には閉じ括弧が必要です。"
+  },
+  {
+    "id": "chapter6_d2_indent_error_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 2,
+    "generator_type": "debug_indent_error",
+    "template": "次のコードを修正して、{text}を{count}回出力せよ",
+    "string_candidates": ["Hello", "Python", "Loop", "Debug", "OK"],
+    "count_min": 2,
+    "count_max": 5,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["インデントを確認する"],
+    "explanation": "for文の中の処理はインデントする必要があります。"
+  },
+  {
+    "id": "chapter6_d2_missing_print_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 2,
+    "generator_type": "debug_missing_print",
+    "template": "次のコードを修正して、{number}を出力せよ",
+    "number_min": 1,
+    "number_max": 100,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "print"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Name"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["printを確認する"],
+    "explanation": "値を表示するにはprint()を使います。"
+  },
+  {
+    "id": "chapter6_d2_wrong_variable_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 2,
+    "generator_type": "debug_wrong_variable",
+    "template": "次のコードを修正して、{answer}を出力せよ",
+    "a_min": 1,
+    "a_max": 50,
+    "b_min": 1,
+    "b_max": 50,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "print"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Name"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["変数名を確認する"],
+    "explanation": "定義した変数名と使う変数名は一致させる必要があります。"
+  },
+  {
+    "id": "chapter6_d3_range_end_error_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 3,
+    "generator_type": "debug_range_end_error",
+    "template": "次のコードを修正して、{start}から{end}までを出力せよ",
+    "start_min": 0,
+    "start_max": 10,
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["rangeの終了値を確認する"],
+    "explanation": "rangeの終了値は出力に含まれません。"
+  },
+  {
+    "id": "chapter6_d3_compare_operator_error_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 3,
+    "generator_type": "debug_compare_operator_error",
+    "template": "次のコードを修正して、xが{number}のときOKを出力せよ",
+    "number_min": 1,
+    "number_max": 50,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_operator",
+        "symbol": "=="
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["比較演算子を確認する"],
+    "explanation": "条件式で等しいかを比較するときは == を使います。"
+  },
+  {
+    "id": "chapter6_d3_logic_condition_error_001",
+    "chapter": 6,
+    "category": "デバッグ",
+    "difficulty": 3,
+    "generator_type": "debug_logic_condition_error",
+    "template": "次のコードを修正して、xが{number}より大きいときOKを出力せよ",
+    "number_min": 1,
+    "number_max": 50,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "fix_code",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_operator",
+        "symbol": ">"
+      }
+    ],
+    "required_keywords": [],
+    "hints": ["条件の向きを確認する"],
+    "explanation": "エラーが出なくても、条件式が間違っていると期待通りに動きません。"
+  }
+]

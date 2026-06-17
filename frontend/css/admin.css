@@ -1,0 +1,94 @@
+/* ========================================
+   【admin.css：管理画面のスタイル】
+   ユーザー管理・テーブル表示など
+   ======================================== */
+
+/* ========================================
+   【ページ全体のレイアウト】
+   ======================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+.description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ========================================
+   【テーブル：ユーザー管理などで使用】
+   ======================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    margin: var(--spacing-lg) 0;
+}
+
+.table-wrapper {
+    width: 100%;
+}
+
+/* ---- テーブルヘッダー ---- */
+th {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 2px solid var(--color-border);
+}
+
+/* ---- テーブルデータセル ---- */
+td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+/* ---- 行のホバー効果 ---- */
+tbody tr:hover {
+    background-color: var(--color-bg-secondary);
+    transition: background-color var(--transition-fast);
+}
+
+/* ========================================
+   【メッセージ】
+   ======================================== */
+
+#message {
+    margin-top: var(--spacing-md);
+    color: var(--color-danger);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ========================================
+   【スマホ対応】
+   テーブルが横スクロールできるように
+   ======================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-md);
+    }
+    
+    table {
+        font-size: var(--font-size-sm);
+        min-width: 720px;
+    }
+    
+    th,
+    td {
+        padding: var(--spacing-sm);
+    }
+    
+    /* テーブルを左右スクロール可能に */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

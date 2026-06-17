@@ -1,0 +1,247 @@
+[
+  {
+    "id": "chapter12_d1_math_sqrt_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 1,
+    "generator_type": "math_sqrt",
+    "template": "math モジュールをimportし、sqrt({number}) の結果を出力せよ",
+    "root_min": 2,
+    "root_max": 20,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "math"
+      },
+      {
+        "type": "require_method_call",
+        "method": "sqrt",
+        "object": "math"
+      }
+    ],
+    "required_keywords": ["import", "math", "sqrt", "print"],
+    "hints": ["math.sqrt() を使う"],
+    "explanation": "平方根を求める問題です。"
+  },
+  {
+    "id": "chapter12_d1_math_pi_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 1,
+    "generator_type": "math_pi",
+    "template": "math モジュールをimportし、pi を出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "math"
+      },
+      {
+        "type": "require_attribute_access",
+        "attr": "pi",
+        "object": "math"
+      }
+    ],
+    "required_keywords": ["import", "math", "pi", "print"],
+    "hints": ["math.pi を使う"],
+    "explanation": "円周率を出力する問題です。"
+  },
+  {
+    "id": "chapter12_d1_math_floor_ceil_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 1,
+    "generator_type": "math_floor_ceil",
+    "template": "math モジュールをimportし、{function_name}({number}) の結果を出力せよ",
+    "function_candidates": ["floor", "ceil"],
+    "number_candidates": [1.2, 2.8, 3.5, 4.1, 5.9, 7.3],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "math"
+      },
+      {
+        "type": "require_method_call",
+        "method_key": "function_name",
+        "object": "math"
+      }
+    ],
+    "required_keywords": ["import", "math", "print"],
+    "hints": ["math.floor() または math.ceil() を使う"],
+    "explanation": "切り捨て・切り上げの問題です。"
+  },
+  {
+    "id": "chapter12_d2_random_randint_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 2,
+    "generator_type": "random_randint",
+    "template": "random をimportし、{min_value}から{max_value}までのランダムな整数を1回出力せよ",
+    "min_candidates": [1, 5, 10],
+    "max_candidates": [10, 20, 30],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "random_output_and_keywords",
+    "expected_output": "",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "random"
+      },
+      {
+        "type": "require_method_call",
+        "method": "randint",
+        "object": "random"
+      }
+    ],
+    "required_keywords": ["import", "random", "randint", "print"],
+    "hints": ["random.randint() を使う"],
+    "explanation": "ランダムな整数を出力する問題です。"
+  },
+  {
+    "id": "chapter12_d2_random_shuffle_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 2,
+    "generator_type": "random_shuffle",
+    "template": "random をimportし、リスト {list_value} を shuffle() でシャッフルして出力せよ",
+    "list_candidates": [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+      ["A", "B", "C"],
+      ["dog", "cat", "bird"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "random_output_and_keywords",
+    "expected_output": "",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "random"
+      },
+      {
+        "type": "require_method_call",
+        "method": "shuffle",
+        "object": "random"
+      }
+    ],
+    "required_keywords": ["import", "random", "shuffle", "print"],
+    "hints": ["random.shuffle() を使う"],
+    "explanation": "shuffle()でリストをランダムに並び替えます。"
+  },
+  {
+    "id": "chapter12_d3_time_sleep_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 3,
+    "generator_type": "time_sleep",
+    "template": "time をimportし、「{before_text}」を出力したあと、sleep({second}) を使ってから「{after_text}」を出力せよ",
+    "before_candidates": ["Start", "Ready", "Go"],
+    "after_candidates": ["End", "Finish", "Done"],
+    "second_candidates": [1, 2],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "time"
+      },
+      {
+        "type": "require_method_call",
+        "method": "sleep",
+        "object": "time"
+      }
+    ],
+    "required_keywords": ["import", "time", "sleep", "print"],
+    "hints": ["time.sleep() を使う"],
+    "explanation": "sleep()を使う問題です。"
+  },
+  {
+    "id": "chapter12_d3_time_time_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 3,
+    "generator_type": "time_time",
+    "template": "time をimportし、現在時刻を取得して出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "random_output_and_keywords",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "time"
+      },
+      {
+        "type": "require_method_call",
+        "method": "time",
+        "object": "time"
+      }
+    ],
+    "output_validator": "non_empty",
+    "required_keywords": ["import", "time", "print"],
+    "hints": ["time.time() を使う"],
+    "explanation": "現在時刻を取得する問題です。"
+  },
+  {
+    "id": "chapter12_d3_datetime_today_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 3,
+    "generator_type": "datetime_today",
+    "template": "datetime から date をimportし、今日の日付を出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "datetime"
+      },
+      {
+        "type": "require_method_call",
+        "method": "today",
+        "object": "date"
+      }
+    ],
+    "required_keywords": ["from", "datetime", "date", "today", "print"],
+    "hints": ["date.today() を使う"],
+    "explanation": "今日の日付を取得する問題です。"
+  },
+  {
+    "id": "chapter12_d3_datetime_now_001",
+    "chapter": 12,
+    "category": "import",
+    "difficulty": 3,
+    "generator_type": "datetime_now",
+    "template": "datetime をimportし、現在日時を出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "random_output_and_keywords",
+    "ast_rules": [
+      {
+        "type": "require_import",
+        "module": "datetime"
+      },
+      {
+        "type": "require_method_call",
+        "method": "now",
+        "object": "datetime.datetime"
+      }
+    ],
+    "output_validator": "non_empty",
+    "required_keywords": ["import", "datetime", "now", "print"],
+    "hints": ["datetime.datetime.now() を使う"],
+    "explanation": "現在日時を取得する問題です。"
+  }
+]

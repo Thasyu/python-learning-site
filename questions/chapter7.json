@@ -1,0 +1,252 @@
+[
+  {
+    "id": "chapter7_d1_input_greeting_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 1,
+    "generator_type": "input_greeting",
+    "template": "input()で名前を受け取り、「{greeting}」を付けて出力せよ",
+    "greeting_candidates": ["こんにちは", "Hello", "ようこそ"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      }
+    ],
+    "required_keywords": ["input", "print"],
+    "hints": [
+      "input()で名前を受け取る",
+      "print()であいさつと名前を出力する"
+    ],
+    "explanation": "input()で受け取った文字列を、別の文字列と一緒に出力できます。"
+  },
+
+  {
+    "id": "chapter7_d1_input_str_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 1,
+    "generator_type": "input_str",
+    "template": "input()で文字列を受け取り、そのまま出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      }
+    ],
+    "required_keywords": ["input", "print"],
+    "hints": [
+      "input()で文字列を受け取る",
+      "print()でそのまま出力する"
+    ],
+    "explanation": "input()で受け取った値は文字列として扱われます。"
+  },
+
+  {
+    "id": "chapter7_d1_input_int_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 1,
+    "generator_type": "input_int",
+    "template": "input()で整数を受け取り、そのまま出力せよ",
+    "input_min": 1,
+    "input_max": 100,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_function_call",
+        "name": "int"
+      }
+    ],
+    "required_keywords": ["input", "int", "print"],
+    "hints": [
+      "input()で値を受け取る",
+      "int()で整数に変換する",
+      "print()で出力する"
+    ],
+    "explanation": "数字を整数として扱うにはint()を使います。"
+  },
+
+  {
+    "id": "chapter7_d1_input_prompt_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 1,
+    "generator_type": "input_prompt",
+    "template": "input()の中に「{prompt}」という文字列を書き、受け取った値を出力せよ",
+    "prompt_candidates": [
+      "名前を入力してください: ",
+      "好きな言葉を入力してください: ",
+      "年齢を入力してください: "
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_call_argument_literal",
+        "name": "input",
+        "value_key": "prompt"
+      }
+    ],
+    "required_keywords": ["input", "print"],
+    "hints": [
+      "input()の中に文字列を書ける",
+      "受け取った値をprint()で出力する"
+    ],
+    "explanation": "input()の中に文字列を書くと、入力前に案内を表示できます。"
+  },
+
+  {
+    "id": "chapter7_d2_input_add_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 2,
+    "generator_type": "input_add",
+    "template": "input()で受け取った数字に{add_value}を足して出力せよ",
+    "add_min": 1,
+    "add_max": 20,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_function_call",
+        "name": "int"
+      }
+    ],
+    "required_keywords": ["input", "int", "print"],
+    "hints": [
+      "input()の値をint()に変換する",
+      "足し算してprint()する"
+    ],
+    "explanation": "input()で受け取った値を計算に利用できます。"
+  },
+
+  {
+    "id": "chapter7_d2_input_multiply_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 2,
+    "generator_type": "input_multiply",
+    "template": "input()を2回使って数字を受け取り、その積を出力せよ",
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_function_call",
+        "name": "int"
+      }
+    ],
+    "required_keywords": ["input", "int", "print"],
+    "hints": [
+      "input()を2回使う",
+      "それぞれint()で変換する",
+      "掛け算してprint()する"
+    ],
+    "explanation": "複数のinput()を使うと、複数の入力値を扱えます。"
+  },
+
+  {
+    "id": "chapter7_d3_input_sum_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 3,
+    "generator_type": "input_sum_until_n",
+    "template": "input()で受け取った数字までの合計を出力せよ",
+    "n_min": 3,
+    "n_max": 20,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_function_call",
+        "name": "int"
+      },
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["input", "int", "for", "range", "print"],
+    "hints": [
+      "input()で数字を受け取る",
+      "for文で1からnまで繰り返す",
+      "totalに足していく"
+    ],
+    "explanation": "入力値をfor文やrangeに利用できます。"
+  },
+
+  {
+    "id": "chapter7_d3_input_product_001",
+    "chapter": 7,
+    "category": "入力",
+    "difficulty": 3,
+    "generator_type": "input_product_until_n",
+    "template": "input()で受け取った数字までをすべて掛け合わせた結果を出力せよ",
+    "n_min": 3,
+    "n_max": 10,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "input"
+      },
+      {
+        "type": "require_function_call",
+        "name": "int"
+      },
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["input", "int", "for", "range", "print"],
+    "hints": [
+      "input()で数字を受け取る",
+      "for文で1からnまで繰り返す",
+      "掛け算しながら保存する"
+    ],
+    "explanation": "for文を使って、連続した掛け算を行えます。"
+  }
+]

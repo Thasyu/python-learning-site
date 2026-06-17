@@ -1,0 +1,812 @@
+[
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-04-17T21:37:19"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-04-19T18:25:02"
+  },
+  {
+    "question_id": "chapter1_02",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-04-19T18:25:20"
+  },
+  {
+    "question_id": "chapter1_03",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5)",
+    "actual_output": "5",
+    "answered_at": "2026-04-19T18:25:29"
+  },
+  {
+    "question_id": "chapter1_04",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5,10)",
+    "actual_output": "5 10",
+    "answered_at": "2026-04-19T18:25:38"
+  },
+  {
+    "question_id": "chapter1_05",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", \"World\")",
+    "actual_output": "Hello World",
+    "answered_at": "2026-04-19T18:26:01"
+  },
+  {
+    "question_id": "chapter1_06",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", 5)",
+    "actual_output": "Hello 5",
+    "answered_at": "2026-04-19T18:26:14"
+  },
+  {
+    "question_id": "chapter1_07",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(1+1)",
+    "actual_output": "2",
+    "answered_at": "2026-04-19T18:26:29"
+  },
+  {
+    "question_id": "chapter1_08",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5-2)",
+    "actual_output": "3",
+    "answered_at": "2026-04-19T18:26:38"
+  },
+  {
+    "question_id": "chapter1_09",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(3*4)",
+    "actual_output": "12",
+    "answered_at": "2026-04-19T18:26:59"
+  },
+  {
+    "question_id": "chapter1_10",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(6/2)",
+    "actual_output": "3.0",
+    "answered_at": "2026-04-19T18:27:11"
+  },
+  {
+    "question_id": "chapter2_list_01",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "a.append(3)",
+    "actual_output": "[0, 1, 2, 3]",
+    "answered_at": "2026-04-20T12:16:36"
+  },
+  {
+    "question_id": "chapter2_list_02",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "a.append(3)\na.append(4)",
+    "actual_output": "[0, 1, 2, 3, 4]",
+    "answered_at": "2026-04-20T12:17:12"
+  },
+  {
+    "question_id": "chapter2_list_03",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(len(a))",
+    "actual_output": "4",
+    "answered_at": "2026-04-20T12:17:38"
+  },
+  {
+    "question_id": "chapter2_loop_01",
+    "chapter": 2,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "for i in range(5)\nprint(i)",
+    "actual_output": "",
+    "answered_at": "2026-04-20T12:18:15"
+  },
+  {
+    "question_id": "chapter2_loop_01",
+    "chapter": 2,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "for i in range(5):\nprint(i)",
+    "actual_output": "",
+    "answered_at": "2026-04-20T12:18:48"
+  },
+  {
+    "question_id": "chapter3_01",
+    "chapter": 3,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "if True\n\tprint(\"Hello\")",
+    "actual_output": "",
+    "answered_at": "2026-04-23T13:59:37"
+  },
+  {
+    "question_id": "chapter3_01",
+    "chapter": 3,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "if True:\n\tprint(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-04-23T14:00:17"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-04-27T12:00:58"
+  },
+  {
+    "question_id": "chapter8_input_01",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = input()\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-04-27T12:08:09"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-12T21:50:51"
+  },
+  {
+    "question_id": "chapter8_input_01",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = input()\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-12T21:56:37"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T20:15:21"
+  },
+  {
+    "question_id": "chapter1_02",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-05-13T20:15:56"
+  },
+  {
+    "question_id": "chapter1_03",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T20:16:05"
+  },
+  {
+    "question_id": "chapter1_04",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5,10)",
+    "actual_output": "5 10",
+    "answered_at": "2026-05-13T20:16:13"
+  },
+  {
+    "question_id": "chapter1_05",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", \"World\")",
+    "actual_output": "Hello World",
+    "answered_at": "2026-05-13T20:16:38"
+  },
+  {
+    "question_id": "chapter1_06",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", 5)",
+    "actual_output": "Hello 5",
+    "answered_at": "2026-05-13T20:16:52"
+  },
+  {
+    "question_id": "chapter1_07",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(1+1)",
+    "actual_output": "2",
+    "answered_at": "2026-05-13T20:16:59"
+  },
+  {
+    "question_id": "chapter1_08",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5-2)",
+    "actual_output": "3",
+    "answered_at": "2026-05-13T20:17:14"
+  },
+  {
+    "question_id": "chapter1_09",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(3*4)",
+    "actual_output": "12",
+    "answered_at": "2026-05-13T20:17:21"
+  },
+  {
+    "question_id": "chapter1_10",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(6/2)",
+    "actual_output": "3.0",
+    "answered_at": "2026-05-13T20:17:29"
+  },
+  {
+    "question_id": "chapter2_01",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 5\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T20:17:43"
+  },
+  {
+    "question_id": "chapter2_02",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 10\nprint(x)",
+    "actual_output": "10",
+    "answered_at": "2026-05-13T20:18:00"
+  },
+  {
+    "question_id": "chapter2_02",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 10\nprint(x)",
+    "actual_output": "10",
+    "answered_at": "2026-05-13T20:18:01"
+  },
+  {
+    "question_id": "chapter2_02",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 10\nprint(x)",
+    "actual_output": "10",
+    "answered_at": "2026-05-13T20:18:02"
+  },
+  {
+    "question_id": "chapter2_03",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "name = \"Hello\"\nprint(name)",
+    "actual_output": "Hello",
+    "answered_at": "2026-05-13T20:18:19"
+  },
+  {
+    "question_id": "chapter2_04",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "a = 5\nb = 10\nprint(a, b)",
+    "actual_output": "5 10",
+    "answered_at": "2026-05-13T20:18:45"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:17:19"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:17:20"
+  },
+  {
+    "question_id": "chapter1_02",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-05-13T21:17:34"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:18:47"
+  },
+  {
+    "question_id": "chapter1_06",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "あ",
+    "actual_output": "",
+    "answered_at": "2026-05-13T21:18:53"
+  },
+  {
+    "question_id": "chapter1_06",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "あ",
+    "actual_output": "",
+    "answered_at": "2026-05-13T21:18:53"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:34:43"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:34:44"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-13T21:34:44"
+  },
+  {
+    "question_id": "chapter2_01",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 5\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T21:35:31"
+  },
+  {
+    "question_id": "chapter2_01",
+    "chapter": 2,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = 5\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T21:36:22"
+  },
+  {
+    "question_id": "chapter8_input_01",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = input()\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T22:14:26"
+  },
+  {
+    "question_id": "chapter8_input_02",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "name = input()\nprint(name)",
+    "actual_output": "Taro",
+    "answered_at": "2026-05-13T22:14:48"
+  },
+  {
+    "question_id": "chapter8_input_03",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "name = input()\nprint(\"Hello\", name)",
+    "actual_output": "Hello Taro",
+    "answered_at": "2026-05-13T22:15:38"
+  },
+  {
+    "question_id": "chapter8_input_04",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "x = int(input())\nprint(x)",
+    "actual_output": "",
+    "answered_at": "2026-05-13T22:16:03"
+  },
+  {
+    "question_id": "chapter8_input_05",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "x = int(print())\nprint(x + 1)",
+    "actual_output": "",
+    "answered_at": "2026-05-13T22:17:20"
+  },
+  {
+    "question_id": "chapter8_input_01",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = input()\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T22:25:28"
+  },
+  {
+    "question_id": "chapter8_input_02",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "name = input()\nprint(name)",
+    "actual_output": "Taro",
+    "answered_at": "2026-05-13T22:25:47"
+  },
+  {
+    "question_id": "chapter8_input_03",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "name = input()\nprint(\"Hello\" + name)",
+    "actual_output": "HelloTaro",
+    "answered_at": "2026-05-13T22:26:23"
+  },
+  {
+    "question_id": "chapter8_input_04",
+    "chapter": 8,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "x = int(input())\nprint(x)",
+    "actual_output": "5",
+    "answered_at": "2026-05-13T22:26:57"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T14:23:11"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T14:23:12"
+  },
+  {
+    "question_id": "chapter1_03",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5)",
+    "actual_output": "5",
+    "answered_at": "2026-05-14T21:38:26"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:39:03"
+  },
+  {
+    "question_id": "chapter1_02",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-05-14T21:39:17"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:41:53"
+  },
+  {
+    "question_id": "chapter1_02",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "Hello",
+    "answered_at": "2026-05-14T21:42:04"
+  },
+  {
+    "question_id": "chapter1_03",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5)",
+    "actual_output": "5",
+    "answered_at": "2026-05-14T21:42:14"
+  },
+  {
+    "question_id": "chapter1_04",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5, 10)",
+    "actual_output": "5 10",
+    "answered_at": "2026-05-14T21:42:23"
+  },
+  {
+    "question_id": "chapter1_05",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", \"World\")",
+    "actual_output": "Hello World",
+    "answered_at": "2026-05-14T21:42:51"
+  },
+  {
+    "question_id": "chapter1_06",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"Hello\", 5)",
+    "actual_output": "Hello 5",
+    "answered_at": "2026-05-14T21:43:03"
+  },
+  {
+    "question_id": "chapter1_07",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(1 + 1)",
+    "actual_output": "2",
+    "answered_at": "2026-05-14T21:43:12"
+  },
+  {
+    "question_id": "chapter1_08",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(5 - 2)",
+    "actual_output": "3",
+    "answered_at": "2026-05-14T21:43:26"
+  },
+  {
+    "question_id": "chapter1_09",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(3 * 4)",
+    "actual_output": "12",
+    "answered_at": "2026-05-14T21:43:34"
+  },
+  {
+    "question_id": "chapter1_10",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(6 / 2)",
+    "actual_output": "3.0",
+    "answered_at": "2026-05-14T21:43:46"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:44:41"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:49:00"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:58:13"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T21:58:33"
+  },
+  {
+    "question_id": "chapter1_01",
+    "chapter": 1,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "print(\"こんにちは\")",
+    "actual_output": "こんにちは",
+    "answered_at": "2026-05-14T23:13:14"
+  },
+  {
+    "question_id": "chapter15_practice_04",
+    "chapter": 15,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "tuji=input(int(\"数字を入力sて下さい\"))\nif tuji // 2 == 0;\n    print(\"even\")\nelse;\n    print(\"odd\")",
+    "actual_output": "",
+    "answered_at": "2026-05-15T11:52:52"
+  },
+  {
+    "question_id": "chapter15_practice_05",
+    "chapter": 15,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "tuji = input(int(\"数字を入力して下さい\"))\nfor i in range(1:tuji)\n     print(i)",
+    "actual_output": "",
+    "answered_at": "2026-05-15T11:54:38"
+  },
+  {
+    "question_id": "chapter15_practice_06",
+    "chapter": 15,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "list = [1,2,3,4,5]\nfor i in range(1:)\n    ",
+    "actual_output": "",
+    "answered_at": "2026-05-15T11:55:58"
+  },
+  {
+    "question_id": "chapter15_practice_07",
+    "chapter": 15,
+    "difficulty": 2,
+    "is_correct": false,
+    "submitted_code": "user = \"tuji\"\nname = user",
+    "actual_output": "",
+    "answered_at": "2026-05-15T11:56:40"
+  },
+  {
+    "question_id": "chapter9_function_01",
+    "chapter": 9,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "print(\"Hello\")",
+    "actual_output": "",
+    "answered_at": "2026-05-19T11:40:38"
+  },
+  {
+    "question_id": "chapter10_d1_001",
+    "chapter": 10,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "print(\"hello0\")",
+    "actual_output": "hello0",
+    "answered_at": "2026-05-19T11:41:15"
+  },
+  {
+    "question_id": "chapter9_d1_001",
+    "chapter": 9,
+    "difficulty": 1,
+    "is_correct": false,
+    "submitted_code": "",
+    "actual_output": "",
+    "answered_at": "2026-05-19T12:00:20"
+  },
+  {
+    "question_id": "chapter9_d1_002",
+    "chapter": 9,
+    "difficulty": 1,
+    "is_correct": true,
+    "submitted_code": "def bye1():\n    print(\"Bye1\")\nbye1()",
+    "actual_output": "Bye1",
+    "answered_at": "2026-05-19T12:01:05"
+  },
+  {
+    "question_id": "chapter3_d3_001",
+    "chapter": 3,
+    "difficulty": 3,
+    "is_correct": true,
+    "submitted_code": "x = 6\n\nif x >5:\n    print(\"Large\")\n",
+    "actual_output": "Large",
+    "answered_at": "2026-05-19T12:39:06"
+  },
+  {
+    "question_id": "chapter15_d3_001",
+    "chapter": 15,
+    "difficulty": 3,
+    "is_correct": false,
+    "submitted_code": "x = int(input(\"\"))\n\nsum_to_1(x)\ndef sum_to_1(int x):\n    print(5)",
+    "actual_output": "",
+    "answered_at": "2026-05-19T12:41:51"
+  },
+  {
+    "question_id": "chapter15_d3_002",
+    "chapter": 15,
+    "difficulty": 3,
+    "is_correct": false,
+    "submitted_code": "",
+    "actual_output": "",
+    "answered_at": "2026-05-19T13:31:07"
+  },
+  {
+    "question_id": "chapter7_d3_001",
+    "chapter": 7,
+    "difficulty": 3,
+    "is_correct": true,
+    "submitted_code": "total = 0\nfor i in range(1, 6):\n    total += i\nprint(total)",
+    "actual_output": "15",
+    "answered_at": "2026-05-21T11:14:59"
+  }
+]

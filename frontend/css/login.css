@@ -1,0 +1,24 @@
+.auth-login .auth-hero {
+    background:
+        linear-gradient(180deg, rgba(7, 16, 29, 0.84), rgba(8, 13, 24, 0.6)),
+        radial-gradient(circle at top right, rgba(76, 201, 255, 0.18), transparent 36%);
+}
+
+.auth-login .auth-card {
+    max-width: 460px;
+}
+
+.auth-login .helper-card {
+    background: linear-gradient(180deg, rgba(8, 14, 26, 0.92), rgba(9, 16, 29, 0.68));
+}
+
+:root[data-theme="light"] .auth-login .auth-hero {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 247, 253, 0.88)),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 36%);
+}
+
+:root[data-theme="light"] .auth-login .helper-card {
+    background: var(--color-surface-soft);
+    border-color: var(--color-border);
+}

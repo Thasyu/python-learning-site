@@ -1,0 +1,270 @@
+[
+  {
+    "id": "chapter9_d1_string_upper_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 1,
+    "generator_type": "string_upper",
+    "template": "文字列「{text}」を大文字にして出力せよ",
+    "text_candidates": ["hello", "python", "code", "apple"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "upper"
+      }
+    ],
+    "required_keywords": ["print", "upper"],
+    "hints": [
+      "upper()を使う"
+    ],
+    "explanation": "upper()を使うと文字列を大文字にできます。"
+  },
+  {
+    "id": "chapter9_d1_string_lower_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 1,
+    "generator_type": "string_lower",
+    "template": "文字列「{text}」を小文字にして出力せよ",
+    "text_candidates": ["HELLO", "PYTHON", "CODE", "APPLE"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "lower"
+      }
+    ],
+    "required_keywords": ["print", "lower"],
+    "hints": [
+      "lower()を使う"
+    ],
+    "explanation": "lower()を使うと文字列を小文字にできます。"
+  },
+  {
+    "id": "chapter9_d1_string_len_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 1,
+    "generator_type": "string_len",
+    "template": "文字列「{text}」の文字数を出力せよ",
+    "text_candidates": ["Python", "Hello", "Programming", "Student"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_call",
+        "name": "len"
+      }
+    ],
+    "required_keywords": ["print", "len"],
+    "hints": [
+      "len()を使う"
+    ],
+    "explanation": "len()を使うと文字列の長さを調べられます。"
+  },
+  {
+    "id": "chapter9_d2_string_replace_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 2,
+    "generator_type": "string_replace",
+    "template": "文字列「{text}」の「{old}」を「{new}」に置き換えて出力せよ",
+    "replace_pairs": [
+      ["I like apple", "apple", "orange"],
+      ["I study Java", "Java", "Python"],
+      ["red pen", "red", "blue"],
+      ["good morning", "morning", "night"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "replace"
+      }
+    ],
+    "required_keywords": ["print", "replace"],
+    "hints": [
+      "replace()を使う"
+    ],
+    "explanation": "replace()を使うと文字列の一部を置き換えられます。"
+  },
+  {
+    "id": "chapter9_d2_string_concat_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 2,
+    "generator_type": "string_concat_basic",
+    "template": "文字列「{left}」と「{right}」を連結して出力せよ",
+    "concat_pairs": [
+      ["Hello", "Python"],
+      ["Good", "Morning"],
+      ["Code", "Study"],
+      ["Data", "Science"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_operator",
+        "symbol": "+"
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "+ を使って文字列を連結する"
+    ],
+    "explanation": "+ を使うと文字列同士を連結できます。"
+  },
+  {
+    "id": "chapter9_d3_string_split_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 3,
+    "generator_type": "string_split",
+    "template": "文字列「{text}」を「{separator}」で分割して出力せよ",
+    "split_patterns": [
+      ["apple,orange,grape", ","],
+      ["red-blue-green", "-"],
+      ["dog/cat/bird", "/"],
+      ["Tokyo Osaka Nagoya", " "]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "split"
+      }
+    ],
+    "required_keywords": ["print", "split"],
+    "hints": [
+      "split()を使う"
+    ],
+    "explanation": "split()を使うと文字列をリストに分割できます。"
+  },
+  {
+    "id": "chapter9_d3_string_strip_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 3,
+    "generator_type": "string_strip",
+    "template": "文字列「{text}」の前後の空白を削除して出力せよ",
+    "text_candidates": [
+      "  hello  ",
+      "  python  ",
+      "  code  ",
+      "  apple  "
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "strip"
+      }
+    ],
+    "required_keywords": ["print", "strip"],
+    "hints": [
+      "strip()を使う"
+    ],
+    "explanation": "strip()を使うと前後の空白を削除できます。"
+  },
+  {
+    "id": "chapter9_d3_string_replace_upper_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 3,
+    "generator_type": "string_replace_upper",
+    "template": "文字列「{text}」の「{old}」を「{new}」に置き換えたあと、大文字にして出力せよ",
+    "replace_pairs": [
+      ["i like apple", "apple", "python"],
+      ["i study java", "java", "python"],
+      ["red pen", "red", "blue"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Attribute"
+      },
+      {
+        "type": "require_method_call",
+        "method": "replace"
+      },
+      {
+        "type": "require_method_call",
+        "method": "upper"
+      }
+    ],
+    "required_keywords": ["print", "replace", "upper"],
+    "hints": [
+      "replace()とupper()を組み合わせる"
+    ],
+    "explanation": "文字列メソッドは続けて使うことができます。"
+  },
+  {
+    "id": "chapter9_d3_string_concat_len_001",
+    "chapter": 9,
+    "category": "文字列",
+    "difficulty": 3,
+    "generator_type": "string_concat_len",
+    "template": "文字列「{left}」と「{right}」を連結し、その文字数を出力せよ",
+    "concat_pairs": [
+      ["Hello", "Python"],
+      ["Good", "Morning"],
+      ["Data", "Science"],
+      ["Code", "Study"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_operator",
+        "symbol": "+"
+      },
+      {
+        "type": "require_function_call",
+        "name": "len"
+      }
+    ],
+    "required_keywords": ["print", "len"],
+    "hints": [
+      "文字列を連結してからlen()を使う"
+    ],
+    "explanation": "連結した文字列に対してlen()を使うこともできます。"
+  }
+]

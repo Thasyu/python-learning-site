@@ -1,0 +1,278 @@
+[
+  {
+    "id": "chapter3_d1_if_compare_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 1,
+    "generator_type": "if_compare_only",
+    "template": "x = {x}, y = {y} のとき、if x {operator} y を使って OK と出力せよ",
+    "x_min": 1,
+    "x_max": 50,
+    "y_min": 1,
+    "y_max": 50,
+    "operator_candidates": ["==", "!=", ">", "<", ">=", "<="],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator_key": "operator",
+        "bindings": [
+          {
+            "name": "x",
+            "value_key": "x"
+          },
+          {
+            "name": "y",
+            "value_key": "y"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["if", "x", "y", "print"],
+    "hints": [
+      "xとyに値を代入する",
+      "if 条件: の形を書く",
+      "条件が成り立つときだけprintする"
+    ],
+    "explanation": "if文では、条件がTrueのときだけ処理が実行されます。"
+  },
+  {
+    "id": "chapter3_d2_if_else_compare_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 2,
+    "generator_type": "if_else_compare",
+    "template": "x = {x}, y = {y} のとき、if x {operator} y を使い、成り立つなら OK、そうでなければ NG と出力せよ",
+    "x_min": 1,
+    "x_max": 50,
+    "y_min": 1,
+    "y_max": 50,
+    "operator_candidates": ["==", "!=", ">", "<", ">=", "<="],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator_key": "operator",
+        "bindings": [
+          {
+            "name": "x",
+            "value_key": "x"
+          },
+          {
+            "name": "y",
+            "value_key": "y"
+          }
+        ]
+      },
+      {
+        "type": "require_if_else"
+      }
+    ],
+    "required_keywords": ["if", "else", "x", "y", "print"],
+    "hints": [
+      "ifで条件を書く",
+      "elseで条件が成り立たない場合を書く",
+      "OKまたはNGを出力する"
+    ],
+    "explanation": "if else を使うと、条件がTrueの場合とFalseの場合で処理を分けられます。"
+  },
+  {
+    "id": "chapter3_d3_if_elif_else_compare_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 3,
+    "generator_type": "if_elif_else_compare",
+    "template": "x = {x}, y = {y} のとき、if x {operator1} y なら A、elif x {operator2} y なら B、それ以外なら C と出力せよ",
+    "x_min": 1,
+    "x_max": 50,
+    "y_min": 1,
+    "y_max": 50,
+    "operator_candidates": ["==", "!=", ">", "<", ">=", "<="],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator_key": "operator1",
+        "bindings": [
+          {
+            "name": "x",
+            "value_key": "x"
+          },
+          {
+            "name": "y",
+            "value_key": "y"
+          }
+        ]
+      },
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 1,
+        "operator_key": "operator2",
+        "bindings": [
+          {
+            "name": "x",
+            "value_key": "x"
+          },
+          {
+            "name": "y",
+            "value_key": "y"
+          }
+        ]
+      },
+      {
+        "type": "require_if_elif_else"
+      }
+    ],
+    "required_keywords": ["if", "elif", "else", "x", "y", "print"],
+    "hints": [
+      "ifで最初の条件を書く",
+      "elifで次の条件を書く",
+      "elseでどちらでもない場合を書く"
+    ],
+    "explanation": "if elif else を使うと、複数の条件を順番に判定できます。"
+  },
+  {
+    "id": "chapter3_d1_if_compare_constant_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 1,
+    "generator_type": "if_compare_constant",
+    "template": "変数{var_name}に{var_value}を代入し、if {var_name} {operator} {compare_value} を使って OK と出力せよ",
+    "operator_candidates": ["==", "!=", ">", "<", ">=", "<="],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator_key": "operator",
+        "compare_value_key": "compare_value",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "var_value"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["if", "print"],
+    "hints": [
+      "変数に値を代入する",
+      "指定された比較演算子を使う",
+      "条件が成り立つときだけOKを出力する"
+    ],
+    "explanation": "変数と比較演算子を組み合わせて条件分岐できます。"
+  },
+  {
+    "id": "chapter3_d2_if_else_parity_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 2,
+    "generator_type": "if_else_parity",
+    "template": "変数{var_name}に{var_value}を代入し、if {var_name} % 2 == 0 なら 偶数、そうでなければ 奇数 と出力せよ",
+    "value_min": 1,
+    "value_max": 100,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator": "==",
+        "compare_value_key": "compare_value",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "var_value"
+          }
+        ]
+      },
+      {
+        "type": "require_operator",
+        "symbol": "%"
+      },
+      {
+        "type": "require_if_else"
+      }
+    ],
+    "required_keywords": ["if", "else", "print", "%"],
+    "hints": [
+      "% を使って偶数かどうかを調べる",
+      "if と else を両方書く",
+      "偶数と奇数で出力を分ける"
+    ],
+    "explanation": "%を使うと偶数・奇数を判定できます。"
+  },
+  {
+    "id": "chapter3_d3_if_elif_else_band_001",
+    "chapter": 3,
+    "category": "条件分岐",
+    "difficulty": 3,
+    "generator_type": "if_elif_else_band",
+    "template": "score = {score} のとき、if score >= {threshold1} なら S、elif score >= {threshold2} なら A、elif score >= {threshold3} なら B、そうでなければ C と出力せよ",
+    "score_min": 0,
+    "score_max": 100,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 0,
+        "operator": ">=",
+        "compare_value_key": "threshold1",
+        "bindings": [
+          {
+            "name": "score",
+            "value_key": "score"
+          }
+        ]
+      },
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 1,
+        "operator": ">=",
+        "compare_value_key": "threshold2",
+        "bindings": [
+          {
+            "name": "score",
+            "value_key": "score"
+          }
+        ]
+      },
+      {
+        "type": "generated_compare_clause",
+        "clause_index": 2,
+        "operator": ">=",
+        "compare_value_key": "threshold3",
+        "bindings": [
+          {
+            "name": "score",
+            "value_key": "score"
+          }
+        ]
+      },
+      {
+        "type": "require_if_elif_else"
+      }
+    ],
+    "required_keywords": ["if", "elif", "else", "print", "score"],
+    "hints": [
+      "上から順に条件を確認する",
+      "elif を2回書く",
+      "最後に else を書く"
+    ],
+    "explanation": "if / elif / else を使うと、複数の条件を順番に判定できます。"
+  }
+]

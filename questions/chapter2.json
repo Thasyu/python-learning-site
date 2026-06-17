@@ -1,0 +1,237 @@
+[
+  {
+    "id": "chapter2_d1_variable_number_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 1,
+    "generator_type": "variable_number",
+    "template": "変数{var_name}に{number}を代入し、その後{var_name}を出力せよ",
+    "variable_candidates": ["x", "num", "score", "age", "price", "count"],
+    "number_min": 1,
+    "number_max": 100,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_at_print",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "number"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "変数に値を代入する",
+      "変数名をprintに渡す"
+    ],
+    "explanation": "変数に値を代入し、その値を出力できます。"
+  },
+  {
+    "id": "chapter2_d1_variable_string_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 1,
+    "generator_type": "variable_string",
+    "template": "変数{var_name}に{text}を代入し、その後{var_name}を出力せよ",
+    "variable_candidates": ["name", "word", "text", "message", "status"],
+    "string_candidates": ["Hello", "Python", "Tokyo", "OK", "Ready"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_at_print",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "text"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "文字列はクォートで囲む",
+      "変数名をprintに渡す"
+    ],
+    "explanation": "変数には文字列も代入できます。"
+  },
+  {
+    "id": "chapter2_d2_variable_update_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 2,
+    "generator_type": "variable_update",
+    "template": "変数{var_name}に{start}を代入し、{var_name} = {var_name} {operator} {change} で更新してから出力せよ",
+    "variable_candidates": ["x", "num", "score", "point", "level"],
+    "start_min": 5,
+    "start_max": 50,
+    "change_min": 1,
+    "change_max": 10,
+    "operator_candidates": ["+", "-", "*"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_before_print",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "start"
+          }
+        ]
+      },
+      {
+        "type": "self_update_assignment",
+        "variable_key": "var_name",
+        "operator_key": "operator",
+        "change_key": "change"
+      },
+      {
+        "type": "require_generated_variables_in_print",
+        "variable_keys": ["var_name"]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "最初に変数へ値を代入する",
+      "変数の値を更新する",
+      "更新後の変数を出力する"
+    ],
+    "explanation": "変数の値は後から更新できます。"
+  },
+  {
+    "id": "chapter2_d2_variable_short_update_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 2,
+    "generator_type": "variable_short_update",
+    "template": "変数{var_name}に{start}を代入し、{var_name} {operator}= {change} で更新してから出力せよ",
+    "variable_candidates": ["x", "num", "score", "point", "level"],
+    "start_min": 5,
+    "start_max": 50,
+    "change_min": 1,
+    "change_max": 10,
+    "operator_candidates": ["+", "-", "*", "//", "%"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_before_print",
+        "bindings": [
+          {
+            "name_key": "var_name",
+            "value_key": "start"
+          }
+        ]
+      },
+      {
+        "type": "augassign_update",
+        "variable_key": "var_name",
+        "operator_key": "operator",
+        "change_key": "change"
+      },
+      {
+        "type": "require_generated_variables_in_print",
+        "variable_keys": ["var_name"]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "短縮代入を使う",
+      "更新後の変数を出力する",
+      "+= や -= の形を意識する"
+    ],
+    "explanation": "x += 1 のように短縮して変数を更新できます。"
+  },
+  {
+    "id": "chapter2_d3_two_variable_calculation_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 3,
+    "generator_type": "two_variable_calculation",
+    "template": "変数{left_var}に{a}、{right_var}に{b}を代入し、{left_var} {operator} {right_var} の結果を出力せよ",
+    "left_variable_candidates": ["a", "x", "price", "width"],
+    "right_variable_candidates": ["b", "y", "count", "height"],
+    "a_min": 2,
+    "a_max": 30,
+    "b_min": 1,
+    "b_max": 10,
+    "operator_candidates": ["+", "-", "*", "/", "//", "%", "**"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_at_print",
+        "bindings": [
+          {
+            "name_key": "left_var",
+            "value_key": "a"
+          },
+          {
+            "name_key": "right_var",
+            "value_key": "b"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "2つの変数に値を代入する",
+      "変数同士で計算する",
+      "結果をprintで出力する"
+    ],
+    "explanation": "変数同士を使って計算できます。"
+  },
+  {
+    "id": "chapter2_d3_three_variable_calculation_001",
+    "chapter": 2,
+    "category": "変数",
+    "difficulty": 3,
+    "generator_type": "three_variable_calculation",
+    "template": "変数{var1}に{a}、{var2}に{b}、{var3}に{c}を代入し、{var1} + {var2} * {var3} の結果を出力せよ",
+    "variable_candidates": ["a", "b", "c", "x", "y", "z"],
+    "a_min": 1,
+    "a_max": 20,
+    "b_min": 1,
+    "b_max": 10,
+    "c_min": 1,
+    "c_max": 10,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "generated_bindings_at_print",
+        "bindings": [
+          {
+            "name_key": "var1",
+            "value_key": "a"
+          },
+          {
+            "name_key": "var2",
+            "value_key": "b"
+          },
+          {
+            "name_key": "var3",
+            "value_key": "c"
+          }
+        ]
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "3つの変数に値を代入する",
+      "計算順序に注意する",
+      "結果を出力する"
+    ],
+    "explanation": "複数の変数を組み合わせて計算できます。"
+  }
+]

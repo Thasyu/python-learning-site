@@ -1,0 +1,241 @@
+[
+  {
+    "id": "chapter11_d1_while_range_output_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 1,
+    "generator_type": "while_range_output",
+    "template": "while文を使って {start} から {end} まで出力せよ",
+    "start_min": 0,
+    "start_max": 10,
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      }
+    ],
+    "required_keywords": ["while", "print"],
+    "hints": ["iを用意する", "whileで条件を書く", "i += 1 を忘れない"],
+    "explanation": "while文では条件がTrueの間、処理を繰り返します。"
+  },
+  {
+    "id": "chapter11_d2_while_sum_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 2,
+    "generator_type": "while_sum",
+    "template": "while文を使って {start} から {end} までの合計を出力せよ",
+    "start_min": 1,
+    "start_max": 5,
+    "count_min": 4,
+    "count_max": 8,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      }
+    ],
+    "required_keywords": ["while", "print"],
+    "hints": ["total = 0 を用意する", "繰り返しながらtotalに足す", "最後にtotalを出力する"],
+    "explanation": "while文を使って合計を計算できます。"
+  },
+  {
+    "id": "chapter11_d2_while_repeat_string_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 2,
+    "generator_type": "while_repeat_string",
+    "template": "while文を使って「{text}」を{count}回出力せよ",
+    "text_candidates": ["Hello", "Python", "OK", "Go", "Study"],
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      }
+    ],
+    "required_keywords": ["while", "print"],
+    "hints": ["回数を数える変数を用意する", "whileで指定回数だけ繰り返す", "i += 1 を忘れない"],
+    "explanation": "while文は同じ処理を指定回数だけ繰り返すときにも使えます。"
+  },
+  {
+    "id": "chapter11_d2_while_multiply_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 2,
+    "generator_type": "while_multiply",
+    "template": "while文を使って {start} から {end} までをすべて掛け合わせた結果を出力せよ",
+    "start_min": 1,
+    "start_max": 3,
+    "count_min": 3,
+    "count_max": 5,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      }
+    ],
+    "required_keywords": ["while", "print"],
+    "hints": ["total = 1 を用意する", "繰り返しながらtotalに掛ける", "最後にtotalを出力する"],
+    "explanation": "while文を使って連続した掛け算もできます。"
+  },
+  {
+    "id": "chapter11_d3_while_even_output_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 3,
+    "generator_type": "while_even_output",
+    "template": "while文を使って {start} から {end} までの偶数だけを出力せよ",
+    "start_min": 1,
+    "start_max": 10,
+    "count_min": 6,
+    "count_max": 12,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      },
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_operator",
+        "symbol": "%"
+      }
+    ],
+    "required_keywords": ["while", "if", "%", "print"],
+    "hints": ["while文の中でifを使う", "i % 2 == 0 で偶数判定する", "i += 1 を忘れない"],
+    "explanation": "while文とif文を組み合わせることで、偶数だけを出力できます。"
+  },
+  {
+    "id": "chapter11_d3_while_odd_output_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 3,
+    "generator_type": "while_odd_output",
+    "template": "while文を使って {start} から {end} までの奇数だけを出力せよ",
+    "start_min": 1,
+    "start_max": 10,
+    "count_min": 6,
+    "count_max": 12,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      },
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_operator",
+        "symbol": "%"
+      }
+    ],
+    "required_keywords": ["while", "if", "%", "print"],
+    "hints": ["while文の中でifを使う", "i % 2 != 0 で奇数判定する", "i += 1 を忘れない"],
+    "explanation": "while文とif文を組み合わせることで、奇数だけを出力できます。"
+  },
+  {
+    "id": "chapter11_d3_while_countdown_001",
+    "chapter": 11,
+    "category": "while",
+    "difficulty": 3,
+    "generator_type": "while_countdown",
+    "template": "while文を使って {start} から {end} までカウントダウンして出力せよ",
+    "start_min": 5,
+    "start_max": 15,
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "While"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Compare"
+      },
+      {
+        "type": "require_node",
+        "node_type": "AugAssign"
+      }
+    ],
+    "required_keywords": ["while", "print"],
+    "hints": ["iを減らしていく", "条件は i >= end の形にする", "i -= 1 を使う"],
+    "explanation": "while文では値を減らしながら繰り返すこともできます。"
+  }
+]

@@ -1,0 +1,314 @@
+.dashboard-body {
+    padding: 24px;
+}
+
+.dashboard-shell {
+    width: min(1360px, 100%);
+    margin: 0 auto;
+}
+
+.dashboard-topbar {
+    margin-bottom: 12px;
+}
+
+.dashboard-brand {
+    display: grid;
+    gap: 6px;
+}
+
+.dashboard-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
+    gap: 20px;
+    margin-bottom: 22px;
+    background:
+        linear-gradient(135deg, rgba(10, 18, 34, 0.94), rgba(7, 12, 22, 0.72)),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 30%);
+}
+
+.dashboard-hero-copy {
+    display: grid;
+    gap: 12px;
+}
+
+.dashboard-hero-copy p {
+    max-width: 760px;
+    font-size: 15px;
+}
+
+.dashboard-mini-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.mini-metric,
+.stat-card,
+.insight-card,
+.difficulty-item,
+.activity-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-metric {
+    padding: 18px;
+    border-radius: 22px;
+    border: 1px solid rgba(140, 161, 206, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.mini-metric span,
+.stat-label,
+.difficulty-item .item-meta,
+.activity-item .activity-meta,
+.insight-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.mini-metric strong,
+.stat-card strong,
+.insight-card strong {
+    color: var(--color-text-primary);
+    font-family: var(--font-family-heading);
+    font-size: clamp(24px, 3vw, 36px);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    min-height: 180px;
+    display: grid;
+    align-content: start;
+    gap: 10px;
+}
+
+.stat-card p {
+    font-size: var(--font-size-sm);
+}
+
+.accent-cyan::after,
+.accent-blue::after,
+.accent-purple::after,
+.accent-green::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    filter: blur(16px);
+    opacity: 0.32;
+}
+
+.accent-cyan::after {
+    background: var(--accent-glow);
+}
+
+.accent-blue::after {
+    background: rgba(85, 139, 255, 0.34);
+}
+
+.accent-purple::after {
+    background: rgba(123, 97, 255, 0.34);
+}
+
+.accent-green::after {
+    background: rgba(38, 208, 168, 0.28);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.panel-progress {
+    grid-column: span 7;
+}
+
+.panel-difficulty {
+    grid-column: span 5;
+}
+
+.panel-chart {
+    grid-column: span 7;
+}
+
+.panel-activity,
+.panel-insights {
+    grid-column: span 5;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.progress-list,
+.difficulty-list,
+.activity-list,
+.insight-stack {
+    display: grid;
+    gap: 14px;
+}
+
+.progress-item,
+.difficulty-item,
+.activity-item,
+.insight-card {
+    padding: 18px;
+    border-radius: 22px;
+    border: 1px solid rgba(139, 161, 206, 0.14);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.progress-item-head,
+.difficulty-item-head,
+.activity-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.progress-item strong,
+.difficulty-item strong,
+.activity-item strong {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+}
+
+.progress-bar {
+    overflow: hidden;
+    height: 10px;
+    margin-top: 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.item-caption {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.chart-wrap {
+    min-height: 300px;
+}
+
+.chart-wrap canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.activity-item {
+    display: grid;
+    gap: 8px;
+}
+
+.activity-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.activity-status.is-correct {
+    color: var(--color-success-hover);
+    background: rgba(38, 208, 168, 0.12);
+}
+
+.activity-status.is-wrong {
+    color: var(--color-danger-hover);
+    background: rgba(255, 100, 124, 0.12);
+}
+
+.insight-card strong {
+    font-size: var(--font-size-lg);
+    line-height: 1.5;
+}
+
+.dashboard-message {
+    margin-bottom: 12px;
+}
+
+
+:root[data-theme="light"] .dashboard-hero {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(244, 247, 253, 0.86)),
+        radial-gradient(circle at top right, var(--accent-soft), transparent 30%);
+}
+
+:root[data-theme="light"] .mini-metric,
+:root[data-theme="light"] .stat-card,
+:root[data-theme="light"] .insight-card,
+:root[data-theme="light"] .difficulty-item,
+:root[data-theme="light"] .activity-item,
+:root[data-theme="light"] .progress-item {
+    background: var(--color-surface-soft);
+    border-color: var(--color-border);
+}
+
+:root[data-theme="light"] .progress-bar {
+    background: rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme="light"] .progress-bar span {
+    box-shadow: 0 0 16px var(--accent-glow);
+}
+
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .panel-progress,
+    .panel-difficulty,
+    .panel-chart,
+    .panel-activity,
+    .panel-insights {
+        grid-column: span 12;
+    }
+
+    .dashboard-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-body {
+        padding: 14px;
+    }
+
+    .stats-grid,
+    .dashboard-mini-metrics {
+        grid-template-columns: 1fr;
+    }
+}

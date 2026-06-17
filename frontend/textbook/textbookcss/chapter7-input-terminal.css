@@ -1,0 +1,125 @@
+.chapter7-interactive-terminal {
+	--chapter7-terminal-line: rgba(145, 167, 213, 0.22);
+	--chapter7-terminal-bg: rgba(4, 9, 18, 0.62);
+	--chapter7-terminal-entry-bg: rgba(8, 17, 30, 0.52);
+	--chapter7-terminal-muted: var(--color-text-muted);
+}
+
+.chapter7-terminal-box {
+	gap: 14px;
+}
+
+.chapter7-terminal-transcript {
+	display: grid;
+	gap: 10px;
+	max-height: 220px;
+	overflow: auto;
+	padding: 8px;
+	border-radius: 12px;
+	border: 1px solid var(--chapter7-terminal-line);
+	background: var(--chapter7-terminal-bg);
+}
+
+.chapter7-terminal-entry {
+	display: grid;
+	gap: 6px;
+	padding: 10px;
+	border: 1px solid var(--chapter7-terminal-line);
+	border-radius: 12px;
+	background: var(--chapter7-terminal-entry-bg);
+	font-family: var(--font-family-mono);
+}
+
+.chapter7-terminal-entry-prompt,
+.chapter7-terminal-entry-value {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.65;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.chapter7-terminal-entry-prompt {
+	color: var(--chapter7-terminal-muted);
+}
+
+.chapter7-terminal-entry-value {
+	color: var(--color-text-primary);
+}
+
+.chapter7-terminal-prompt-row {
+	display: grid;
+	gap: 10px;
+	padding: 12px;
+	border: 1px dashed var(--accent-border);
+	border-radius: 14px;
+	background: var(--accent-ring);
+}
+
+.chapter7-terminal-prompt {
+	font-family: var(--font-family-mono);
+	font-size: 13px;
+	color: var(--color-text-secondary);
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.chapter7-terminal-input-line {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	align-items: center;
+	gap: 8px;
+}
+
+.chapter7-terminal-cursor {
+	font-family: var(--font-family-mono);
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-text-primary);
+}
+
+.chapter7-terminal-live-input {
+	width: 100%;
+	min-height: 40px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	border: 1px solid var(--chapter7-terminal-line);
+	background: var(--chapter7-terminal-bg);
+	color: var(--color-text-primary);
+	font-family: var(--font-family-mono);
+	font-size: 13px;
+	outline: none;
+	transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.chapter7-terminal-live-input:focus {
+	border-color: var(--accent-border);
+	box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.chapter7-terminal-submit {
+	justify-self: end;
+	min-height: 40px;
+	padding: 0 16px;
+}
+
+.practice-terminal-wrap.is-waiting .chapter7-terminal-prompt-row {
+	border-color: var(--accent-border);
+	box-shadow: 0 0 0 1px var(--accent-ring);
+}
+
+:root[data-theme="light"] .chapter7-interactive-terminal {
+	--chapter7-terminal-line: rgba(130, 148, 181, 0.28);
+	--chapter7-terminal-bg: rgba(255, 255, 255, 0.74);
+	--chapter7-terminal-entry-bg: rgba(245, 248, 255, 0.92);
+}
+
+@media (max-width: 768px) {
+	.chapter7-terminal-prompt-row {
+		padding: 10px;
+	}
+
+	.chapter7-terminal-submit {
+		width: 100%;
+		justify-self: stretch;
+	}
+}

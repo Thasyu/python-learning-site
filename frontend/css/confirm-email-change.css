@@ -1,0 +1,37 @@
+.auth-email-change-confirm .auth-hero {
+    min-height: 580px;
+    background:
+        linear-gradient(180deg, rgba(7, 16, 28, 0.88), rgba(7, 11, 19, 0.64)),
+        radial-gradient(circle at top left, rgba(76, 201, 255, 0.2), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.16), transparent 32%);
+}
+
+.auth-email-change-confirm .hero-points-single {
+    grid-template-columns: 1fr;
+}
+
+.auth-email-change-confirm .auth-card {
+    max-width: 460px;
+}
+
+.confirm-actions {
+    display: grid;
+}
+
+@media (max-width: 768px) {
+    .auth-email-change-confirm .auth-hero {
+        min-height: auto;
+    }
+}
+
+:root[data-theme="light"] .auth-email-change-confirm .auth-hero {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 247, 253, 0.88)),
+        radial-gradient(circle at top left, var(--accent-soft), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.1), transparent 32%);
+}
+
+:root[data-theme="light"] .auth-email-change-confirm .helper-card {
+    background: var(--color-surface-soft);
+    border-color: var(--color-border);
+}

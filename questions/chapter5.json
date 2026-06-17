@@ -1,0 +1,94 @@
+[
+  {
+    "id": "chapter5_d1_list_output_001",
+    "chapter": 5,
+    "category": "リスト",
+    "difficulty": 1,
+    "generator_type": "list_output",
+    "template": "{list_value} を出力せよ",
+    "number_min": 1,
+    "number_max": 50,
+    "list_length": 3,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "List"
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "リストは [] を使う",
+      "printで出力する"
+    ],
+    "explanation": "リストを出力できます。"
+  },
+
+  {
+    "id": "chapter5_d2_list_single_operation_001",
+    "chapter": 5,
+    "category": "リスト",
+    "difficulty": 2,
+    "generator_type": "list_single_operation",
+    "template": "a = {list_value} に対して {operation_text} を行い、出力せよ",
+    "operations": ["append", "change", "remove"],
+    "number_min": 1,
+    "number_max": 50,
+    "list_length": 4,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "List"
+      },
+      {
+        "type": "require_generated_list_operations",
+        "operation_key": "operation",
+        "object": "a"
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "append・変更・remove のどれかを使う",
+      "操作後にprint(a)する"
+    ],
+    "explanation": "リストは追加・変更・削除ができます。"
+  },
+
+  {
+    "id": "chapter5_d3_list_double_operation_001",
+    "chapter": 5,
+    "category": "リスト",
+    "difficulty": 3,
+    "generator_type": "list_double_operation",
+    "template": "a = {list_value} に対して {operation_text1} と {operation_text2} を行い、出力せよ",
+    "operations": ["append", "change", "remove"],
+    "number_min": 1,
+    "number_max": 50,
+    "list_length": 5,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "List"
+      },
+      {
+        "type": "require_generated_list_operations",
+        "operations_key": "operations",
+        "object": "a"
+      }
+    ],
+    "required_keywords": ["print"],
+    "hints": [
+      "2つの操作を順番に行う",
+      "最後にprint(a)する"
+    ],
+    "explanation": "リスト操作を複数組み合わせられます。"
+  }
+]

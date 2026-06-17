@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習画面 | Python Learning Cloud</title>
+    <link rel="icon" href="../image/main.png" type="image/png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/study.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="brand">
+            <img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="brand-logo">
+            <span class="brand-name">Python Learning Cloud</span>
+        </div>
+
+        <div>
+            <button id="homeButton">ホーム</button>
+            <button id="dashboardButton">ダッシュボード</button>
+        </div>
+    </div>
+
+    <div id="settingArea" class="setup-shell glass-panel glass-outline">
+        <section class="setup-head">
+            <p class="setup-eyebrow">Learning Studio</p>
+            <h2>Session Configuration</h2>
+            <p>IDEライクな学習セッションを開始します。chapter・モード・復習設定を選択してください。</p>
+        </section>
+
+        <section class="setup-grid">
+            <article class="setup-card chapter-card">
+                <label for="chapterSelect">chapterを選択</label>
+                <select id="chapterSelect">
+                    <option value="1">chapter 1：出力と基本</option>
+                    <option value="2">chapter 2：変数</option>
+                    <option value="3">chapter 3：条件分岐</option>
+                    <option value="4">chapter 4：ループ</option>
+                    <option value="5">chapter 5：リスト</option>
+                    <option value="6">chapter 6：デバッグ</option>
+                    <option value="7">chapter 7：input</option>
+                    <option value="8">chapter 8：関数</option>
+                    <option value="9">chapter 9：文字列</option>
+                    <option value="10">chapter 10：辞書</option>
+                    <option value="11">chapter 11：while</option>
+                    <option value="12">chapter 12：import</option>
+                    <option value="13">chapter 13：例外処理</option>
+                </select>
+            </article>
+
+            <article class="setup-card mode-card-wrap">
+                <label for="modeSelect">出題モード</label>
+                <select id="modeSelect" class="mode-select-hidden" aria-hidden="true">
+                    <option value="recommended">おすすめモード（D1×4 / D2×3 / D3×3）</option>
+                    <option value="easy">初級モード（D1から10問）</option>
+                    <option value="normal">中級モード（D2から10問）</option>
+                    <option value="hard">上級モード（D3から10問）</option>
+                </select>
+                <div class="mode-card-grid" id="modeCardGrid">
+                    <button type="button" class="mode-card is-active" data-mode="recommended">
+                        <span class="mode-title">おすすめ</span>
+                        <span class="mode-meta">D1×4 / D2×3 / D3×3</span>
+                    </button>
+                    <button type="button" class="mode-card" data-mode="easy">
+                        <span class="mode-title">初級</span>
+                        <span class="mode-meta">D1 を10問</span>
+                    </button>
+                    <button type="button" class="mode-card" data-mode="normal">
+                        <span class="mode-title">中級</span>
+                        <span class="mode-meta">D2 を10問</span>
+                    </button>
+                    <button type="button" class="mode-card" data-mode="hard">
+                        <span class="mode-title">上級</span>
+                        <span class="mode-meta">D3 を10問</span>
+                    </button>
+                </div>
+            </article>
+
+            <article class="setup-card review-card">
+                <div>
+                    <p class="review-title">復習モード</p>
+                    <p class="review-meta">間違えた問題のみを再出題します</p>
+                </div>
+                <label class="switch" for="reviewMode">
+                    <input type="checkbox" id="reviewMode">
+                    <span class="switch-slider"></span>
+                </label>
+            </article>
+        </section>
+
+        <div id="resumeArea" class="resume-card" style="display: none; margin: 12px 0;">
+            <p id="resumeSummary"></p>
+            <div class="resume-actions">
+                <button id="resumeStudyButton">前回の続きから再開</button>
+                <button id="startNewStudyButton">新しく開始</button>
+            </div>
+        </div>
+
+        <button id="startStudyButton">学習開始</button>
+    </div>
+
+    <div id="studyArea" style="display: none;">
+        <div class="study-shell">
+            <main class="study-main glass-panel glass-outline">
+                <div class="study-main-header">
+                    <p id="progressText"></p>
+                    <div class="study-main-actions">
+                        <button id="pauseStudyButton">学習を中断</button>
+                    </div>
+                </div>
+
+                <section class="question-card fade-in-up" id="questionCard">
+                    <p id="questionInfo"></p>
+                    <h2 id="questionText">問題を読み込み中...</h2>
+                </section>
+
+                <div id="starterCodeArea" class="starter-code-area code-panel" style="display: none;">
+                    <p class="panel-title">修正前コード</p>
+                    <pre id="starterCode"></pre>
+                </div>
+
+                <div id="endingCodeArea" class="ending-code-area code-panel" style="display: none;">
+                    <p class="panel-title">続きのコード</p>
+                    <pre id="endingCode"></pre>
+                </div>
+
+                <div class="code-box code-panel">
+                    <p class="panel-title">回答コード</p>
+                    <div class="editor-shell" id="editorShell">
+                        <pre id="editorLineNumbers" class="editor-gutter" aria-hidden="true">1</pre>
+                        <textarea id="answerCode" rows="10" placeholder="ここにPythonコードを入力"></textarea>
+                    </div>
+                </div>
+
+                <div class="study-controls">
+                    <button id="submitButton">回答する</button>
+                    <button id="nextButton" style="display: none;">次へ進む</button>
+                </div>
+
+                <p id="message" class="inline-message"></p>
+
+                <div id="resultArea" class="result-panel" style="display: none;">
+                    <div class="result-panel-head">
+                        <span class="window-dot is-red"></span>
+                        <span class="window-dot is-yellow"></span>
+                        <span class="window-dot is-green"></span>
+                        <span class="result-panel-title">OUTPUT / EXPLANATION</span>
+                    </div>
+
+                    <div id="verdictBanner" class="verdict-banner">
+                        <span id="verdictIcon" class="verdict-icon">●</span>
+                        <div class="verdict-content">
+                            <strong id="verdictText">PENDING</strong>
+                            <p id="verdictSub">回答後に判定結果を表示します</p>
+                        </div>
+                    </div>
+
+                    <div class="result-grid">
+                        <section class="result-block" id="inputDataBlock" style="display: none;">
+                            <h3>入力データ</h3>
+                            <pre id="inputData"></pre>
+                        </section>
+
+                        <section class="result-block">
+                            <h3>実行結果</h3>
+                            <pre id="actualOutput"></pre>
+                        </section>
+
+                        <section class="result-block">
+                            <h3>期待される出力</h3>
+                            <pre id="expectedOutput"></pre>
+                        </section>
+
+                        <section class="result-block">
+                            <h3>解説</h3>
+                            <pre id="explanation"></pre>
+                        </section>
+
+                        <section class="result-block">
+                            <h3>模範解答</h3>
+                            <pre id="modelAnswers"></pre>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="study-side glass-panel glass-outline">
+                <section class="stats-panel">
+                    <h3>学習ステータス</h3>
+                    <div class="stats-grid">
+                        <article class="stat-item">
+                            <p>進捗</p>
+                            <strong id="statProgress">0 / 0</strong>
+                        </article>
+                        <article class="stat-item">
+                            <p>正答率</p>
+                            <strong id="statAccuracy">0%</strong>
+                        </article>
+                        <article class="stat-item">
+                            <p>Streak</p>
+                            <strong id="statStreak">0</strong>
+                        </article>
+                        <article class="stat-item">
+                            <p>Review</p>
+                            <strong id="statReview">0</strong>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="question-nav-panel">
+                    <div class="question-nav-head">
+                        <h3>問題ナビ</h3>
+                        <p id="navHelpText">回答後に次の問題が解放されます</p>
+                        <div class="nav-progress-track">
+                            <span id="navProgressBar" class="nav-progress-bar"></span>
+                        </div>
+                    </div>
+                    <div id="questionNav" class="question-nav-grid"></div>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+    <div id="pauseConfirmModal" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <h3>学習を中断しますか？</h3>
+            <p>学習状態を保存しますか？</p>
+
+            <div class="modal-buttons">
+                <button id="saveAndExitButton">保存してホームへ</button>
+                <button id="exitWithoutSaveButton">保存せずホームへ</button>
+                <button id="cancelPauseButton">キャンセル</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="finishArea" class="finish-shell glass-panel glass-outline" style="display: none;">
+        <section class="finish-head">
+            <p class="setup-eyebrow">Session Complete</p>
+            <h2>学習終了</h2>
+            <p id="finishResult"></p>
+        </section>
+
+        <section class="finish-grid">
+            <article class="finish-card">
+                <p>正答率</p>
+                <strong id="finishAccuracy">0%</strong>
+            </article>
+            <article class="finish-card">
+                <p>正解</p>
+                <strong id="finishCorrect">0</strong>
+            </article>
+            <article class="finish-card">
+                <p>不正解</p>
+                <strong id="finishWrong">0</strong>
+            </article>
+            <article class="finish-card">
+                <p>最大 Streak</p>
+                <strong id="finishStreak">0</strong>
+            </article>
+            <article class="finish-card">
+                <p>Review追加</p>
+                <strong id="finishReview">0</strong>
+            </article>
+            <article class="finish-card highlight-rank">
+                <p>学習ランク</p>
+                <strong id="finishRank">C</strong>
+            </article>
+        </section>
+
+        <div class="finish-actions">
+            <button id="goDashboardButton">ダッシュボードへ</button>
+            <button id="goHomeButton">ホームへ戻る</button>
+            <button id="restartButton">もう一度解く</button>
+        </div>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="../js/study.js?v=20260611"></script>
+</body>
+</html>

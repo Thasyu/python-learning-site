@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メールアドレス変更確認 | Python Learning Cloud</title>
+    <link rel="icon" href="../image/main.png" type="image/png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/confirm-email-change.css">
+</head>
+<body class="theme-saas auth-body auth-email-change-confirm">
+    <main class="auth-shell auth-shell-compact">
+        <section class="auth-hero glass-panel glass-outline">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Security Console</span>
+                    <h1 class="hero-title">メールアドレス変更の最終確認</h1>
+                    <p>確認リンクを検証し、メールアドレス更新を確定します。成功後はセッションを保護するため再ログインが必要です。</p>
+                </div>
+
+                <div class="hero-points hero-points-single">
+                    <div class="hero-point">
+                        <h3>リンク有効期限</h3>
+                        <p>確認リンクの有効期限は30分です。期限切れの場合は settings から再送信してください。</p>
+                    </div>
+                    <div class="hero-point">
+                        <h3>Token再利用防止</h3>
+                        <p>リンクは1回のみ有効です。使い回しや改ざんされたリンクは拒否されます。</p>
+                    </div>
+                </div>
+
+                <div class="code-window">
+                    <code>token.verify()
+email.update()
+session.invalidate_all()</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-card card glass-outline">
+            <div class="auth-card-header">
+                <div class="auth-logo">
+                    <img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="auth-logo-img">
+                </div>
+                <span class="eyebrow">Email Change</span>
+                <h2>メールアドレス変更の確認</h2>
+                <p>以下のボタンを押すと、メールアドレス変更を確定します。</p>
+            </div>
+
+            <div class="helper-card">
+                <h3>実行される処理</h3>
+                <ul class="auth-meta">
+                    <li>tokenの有効期限と改ざんを検証</li>
+                    <li>users.email を更新</li>
+                    <li>既存セッションを無効化し再ログインを要求</li>
+                </ul>
+            </div>
+
+            <div class="auth-actions confirm-actions">
+                <button id="confirmEmailChangeButton" class="btn-primary" type="button">メールアドレスを変更する</button>
+            </div>
+
+            <div class="auth-sub-actions">
+                <button id="goLoginButton" class="btn-secondary" type="button">ログインへ</button>
+                <button id="goHomeButton" class="btn-ghost" type="button">ホームへ</button>
+            </div>
+
+            <p id="message" class="inline-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="../js/common.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="../js/confirm-email-change.js"></script>
+</body>
+</html>

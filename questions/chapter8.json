@@ -1,0 +1,273 @@
+[
+  {
+    "id": "chapter8_d1_function_print_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 1,
+    "generator_type": "function_print",
+    "template": "{function_name} という関数を作成し、その後呼び出して {text} を出力せよ",
+    "function_name_candidates": ["hello", "show_message", "display", "say_ok"],
+    "text_candidates": ["Hello", "Python", "OK", "Good"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      }
+    ],
+    "required_keywords": ["def", "print"],
+    "hints": [
+      "defで関数を作る",
+      "関数の中でprintする",
+      "最後に関数を呼び出す"
+    ],
+    "explanation": "関数は定義しただけでは実行されないため、最後に呼び出す必要があります。"
+  },
+  {
+    "id": "chapter8_d2_function_return_calculation_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 2,
+    "generator_type": "function_return_calculation",
+    "template": "{function_name} という関数を作成し、a と b を受け取り、a {operator} b の結果を return せよ。その後、{a} と {b} を渡して結果を出力せよ",
+    "function_name_candidates": ["add", "calc", "compute", "answer"],
+    "operator_candidates": ["+", "-", "*"],
+    "a_min": 1,
+    "a_max": 30,
+    "b_min": 1,
+    "b_max": 20,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Return"
+      }
+    ],
+    "required_keywords": ["def", "return", "print"],
+    "hints": [
+      "引数aとbを使う",
+      "returnで結果を返す",
+      "print(関数名(...)) の形で出力する"
+    ],
+    "explanation": "returnを使うと、関数の処理結果を呼び出し元に返せます。"
+  },
+  {
+    "id": "chapter8_d3_function_if_return_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 3,
+    "generator_type": "function_if_return",
+    "template": "{function_name} という関数を作成し、score を受け取り、{border}以上なら Pass、それ以外なら Fail を return せよ。その後、{score} を渡して結果を出力せよ",
+    "function_name_candidates": ["check_score", "judge", "result", "check_pass"],
+    "score_min": 0,
+    "score_max": 100,
+    "border_min": 50,
+    "border_max": 80,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Return"
+      },
+      {
+        "type": "require_node",
+        "node_type": "If"
+      }
+    ],
+    "required_keywords": ["def", "if", "else", "return", "print"],
+    "hints": [
+      "ifで条件分岐する",
+      "PassまたはFailをreturnする",
+      "printで関数の結果を出力する"
+    ],
+    "explanation": "関数の中でif文を使うと、条件によって返す値を変えられます。"
+  },
+  {
+    "id": "chapter8_d3_function_for_print_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 3,
+    "generator_type": "function_for_print",
+    "template": "{function_name} という関数を作成し、for と range を使って {start} から {end} までを出力せよ。その後、関数を呼び出せ",
+    "function_name_candidates": ["show_numbers", "print_numbers", "display_range"],
+    "start_min": 1,
+    "start_max": 5,
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["def", "for", "range", "print"],
+    "hints": [
+      "関数の中にfor文を書く",
+      "rangeの終了値は含まれない",
+      "最後に関数を呼び出す"
+    ],
+    "explanation": "関数の中にfor文を書くことで、繰り返し処理をまとめられます。"
+  },
+  {
+    "id": "chapter8_d3_function_sum_return_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 3,
+    "generator_type": "function_sum_return",
+    "template": "{function_name} という関数を作成し、1から{end}までの合計を return せよ。その後、結果を出力せよ",
+    "function_name_candidates": ["sum_numbers", "total_numbers", "calc_sum"],
+    "end_min": 3,
+    "end_max": 10,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Return"
+      },
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["def", "for", "range", "return", "print"],
+    "hints": [
+      "total = 0 を用意する",
+      "for文で1から指定値まで足す",
+      "returnで合計を返す"
+    ],
+    "explanation": "関数の中で合計を計算し、returnで結果を返せます。"
+  },
+  {
+    "id": "chapter8_d3_function_string_return_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 3,
+    "generator_type": "function_string_return",
+    "template": "{function_name} という関数を作成し、name を受け取り、「{greeting} {name}」の形で return せよ。その後、{name} を渡して結果を出力せよ",
+    "function_name_candidates": ["greet", "make_message", "hello_name"],
+    "greeting_candidates": ["こんにちは", "Hello", "Welcome"],
+    "name_candidates": ["太郎", "Hanako", "Python"],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Return"
+      }
+    ],
+    "required_keywords": ["def", "return", "print"],
+    "hints": [
+      "引数nameを使う",
+      "文字列とnameを組み合わせる",
+      "returnした結果をprintする"
+    ],
+    "explanation": "関数の中で文字列を組み立てて返すことができます。"
+  },
+  {
+    "id": "chapter8_d3_function_even_odd_001",
+    "chapter": 8,
+    "category": "関数",
+    "difficulty": 3,
+    "generator_type": "function_even_odd",
+    "template": "{function_name} という関数を作成し、number を受け取り、偶数なら Even、奇数なら Odd を return せよ。その後、{number} を渡して結果を出力せよ",
+    "function_name_candidates": ["check_even", "judge_even", "even_or_odd"],
+    "number_min": 1,
+    "number_max": 50,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_function_def",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_function_call",
+        "name_key": "function_name"
+      },
+      {
+        "type": "require_node",
+        "node_type": "Return"
+      },
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_operator",
+        "symbol": "%"
+      }
+    ],
+    "required_keywords": ["def", "if", "else", "return", "print", "%"],
+    "hints": [
+      "number % 2 == 0 で偶数判定する",
+      "偶数ならEvenを返す",
+      "奇数ならOddを返す"
+    ],
+    "explanation": "%を使うと、偶数か奇数かを判定できます。"
+  }
+]

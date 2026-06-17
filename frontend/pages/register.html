@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>新規登録 | Python Learning Cloud</title>
+	<link rel="icon" href="../image/main.png" type="image/png">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/register.css">
+</head>
+<body class="theme-saas auth-body auth-register">
+	<main class="auth-shell">
+		<section class="auth-hero glass-panel glass-outline">
+			<div class="hero-grid">
+				<div class="hero-copy">
+					<span class="eyebrow">Workspace Setup</span>
+					<h1 class="hero-title">学習環境を作成して、Pythonの習慣を本番品質で始める。</h1>
+					<p>登録直後から演習、進捗、復習キューを使える構成です。教材っぽさを抑え、AIエディタ系サービスのような空気感で統一しています。</p>
+				</div>
+
+				<div class="hero-stats">
+					<div class="hero-stat">
+						<strong>1 min</strong>
+						<span>開始まで最短</span>
+					</div>
+					<div class="hero-stat">
+						<strong>Cloud</strong>
+						<span>どこでも継続可能</span>
+					</div>
+					<div class="hero-stat">
+						<strong>Focus</strong>
+						<span>復習動線を最適化</span>
+					</div>
+				</div>
+
+				<div class="hero-points">
+					<div class="hero-point">
+						<h3>入力体験を滑らかに</h3>
+						<p>視認性の高いフォーム、統一された hover、軽いモーションで負荷を減らします。</p>
+					</div>
+					<div class="hero-point">
+						<h3>公開前提の質感</h3>
+						<p>発光は控えめ、コントラストは高めにして、子供っぽさを避けた高級寄りのデザインにしています。</p>
+					</div>
+				</div>
+
+				<div class="hero-rail">
+					<div class="code-window">
+						<code>workspace.create(user)
+profile.verify(email)
+security.policy(password="mixed")
+journey.begin(track="python")</code>
+					</div>
+					<div class="auth-status">
+						<span class="eyebrow">Ready</span>
+						<h3>学習を再現性ある状態で開始</h3>
+						<p>認証、進捗記録、復習キューまでを一続きの導線として扱います。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="auth-card card glass-outline">
+			<div class="auth-card-header">			<div class="auth-logo">
+				<img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="auth-logo-img">
+			</div>				<span class="eyebrow">Create Account</span>
+				<h2>新しいワークスペースを作成</h2>
+				<p>学習履歴と復習状況を保存するためのアカウントを登録します。</p>
+			</div>
+
+			<div class="helper-card">
+				<h3>登録ルール</h3>
+				<ul class="rules-list">
+					<li>ログインIDは1〜20文字、英数字と _ が使えます。</li>
+					<li>ニックネームは任意入力です（1〜30文字）。</li>
+					<li>メールアドレスは空白なし、@ を含む形式。</li>
+					<li>パスワードは4〜32文字で英字と数字を両方含める必要があります。</li>
+					<li>パスワード確認はパスワードと同じ値を入力してください。</li>
+				</ul>
+			</div>
+
+			<form class="auth-form" onsubmit="return false;">
+				<div class="field-group">
+					<label for="username">ログインID</label>
+					<div class="input-shell has-prefix">
+						<span class="input-prefix">ID</span>
+						<input type="text" id="username" placeholder="build_with_python" autocomplete="username">
+					</div>
+				</div>
+
+				<div class="field-group">
+					<label for="displayName">ニックネーム（任意）</label>
+					<div class="input-shell">
+						<input type="text" id="displayName" placeholder="Python Learner" autocomplete="nickname">
+					</div>
+				</div>
+
+				<div class="field-group">
+					<label for="email">メールアドレス</label>
+					<div class="input-shell has-prefix">
+						<span class="input-prefix">@</span>
+						<input type="email" id="email" placeholder="name@example.com" autocomplete="email">
+					</div>
+				</div>
+
+				<div class="field-group">
+					<label for="password">パスワード</label>
+					<div class="input-shell">
+						<input type="password" id="password" placeholder="Use letters and numbers" autocomplete="new-password">
+						<button type="button" class="password-toggle" data-password-toggle="password" aria-label="パスワード表示切替" aria-pressed="false">SHOW</button>
+					</div>
+					<span class="validation-hint">推測されにくい構成にするほど、公開後の運用も安定します。</span>
+				</div>
+
+				<div class="field-group">
+					<label for="confirmPassword">パスワード確認</label>
+					<div class="input-shell">
+						<input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="new-password">
+						<button type="button" class="password-toggle" data-password-toggle="confirmPassword" aria-label="確認用パスワード表示切替" aria-pressed="false">SHOW</button>
+					</div>
+				</div>
+
+				<div class="auth-actions">
+					<button id="registerButton" class="btn-success" type="button">登録</button>
+				</div>
+			</form>
+
+			<div class="section-divider"></div>
+
+			<div class="auth-sub-actions">
+				<button id="goLoginButton" class="btn-primary" type="button">ログイン画面へ戻る</button>
+				<button id="homeButton" class="btn-ghost" type="button">ホームへ戻る</button>
+			</div>
+
+			<p id="message" class="inline-message" aria-live="polite"></p>
+		</section>
+	</main>
+
+	<script src="../js/common.js"></script>
+	<script src="../utils/api.js"></script>
+	<script src="../js/register.js"></script>
+</body>
+</html>

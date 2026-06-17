@@ -1,0 +1,153 @@
+[
+  {
+    "id": "chapter13_d1_try_except_basic_001",
+    "chapter": 13,
+    "category": "例外処理",
+    "difficulty": 1,
+    "generator_type": "try_except_basic",
+    "template": "{error_name} が発生したとき、「{error_text}」を出力せよ",
+    "error_patterns": [
+      ["NameError", "print(message)", "名前エラー"],
+      ["ZeroDivisionError", "10 / 0", "0で割れません"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_try_except"
+      },
+      {
+        "type": "require_node",
+        "node_type": "ExceptHandler"
+      }
+    ],
+    "required_keywords": ["try", "except", "print"],
+    "hints": [
+      "try-exceptを使う",
+      "exceptの中でprintする"
+    ],
+    "explanation": "tryの中でエラーが起きた場合、exceptの処理が実行されます。"
+  },
+  {
+    "id": "chapter13_d2_specific_error_001",
+    "chapter": 13,
+    "category": "例外処理",
+    "difficulty": 2,
+    "generator_type": "specific_error",
+    "template": "{error_name} を捕捉し、エラー時に「{error_text}」を出力せよ",
+    "error_patterns": [
+      ["ValueError", "int(\"hello\")", "変換エラー"],
+      ["TypeError", "\"5\" + 3", "型エラー"],
+      ["IndexError", "numbers = [1, 2, 3]\nprint(numbers[5])", "範囲外です"],
+      ["ZeroDivisionError", "10 / 0", "0で割れません"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_try_except"
+      },
+      {
+        "type": "require_specific_except",
+        "name_key": "error_name"
+      }
+    ],
+    "required_keywords": ["try", "except", "print"],
+    "hints": [
+      "except ValueError: のように書く",
+      "エラー名を指定する"
+    ],
+    "explanation": "exceptに例外名を書くことで、特定のエラーだけ処理できます。"
+  },
+  {
+    "id": "chapter13_d3_try_except_finally_001",
+    "chapter": 13,
+    "category": "例外処理",
+    "difficulty": 3,
+    "generator_type": "try_except_finally",
+    "template": "{error_name} を発生させ、エラー時に「{error_text}」、最後に「{finally_text}」を出力せよ",
+    "error_patterns": [
+      ["ValueError", "int(\"hello\")"],
+      ["TypeError", "\"5\" + 3"]
+    ],
+    "error_text_candidates": [
+      "error",
+      "エラー発生",
+      "失敗しました",
+      "例外です"
+    ],
+    "finally_text_candidates": [
+      "done",
+      "終了",
+      "完了",
+      "finish"
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_try_except"
+      },
+      {
+        "type": "require_finally"
+      }
+    ],
+    "required_keywords": ["try", "except", "finally", "print"],
+    "hints": [
+      "finallyは最後に必ず実行される",
+      "出力順に注意"
+    ],
+    "explanation": "finallyは、例外の有無に関係なく最後に実行されます。"
+  },
+  {
+    "id": "chapter13_d3_multiple_except_001",
+    "chapter": 13,
+    "category": "例外処理",
+    "difficulty": 3,
+    "generator_type": "multiple_except",
+    "template": "{error_name1} と {error_name2} をそれぞれ捕捉し、別々のメッセージを出力せよ",
+    "multiple_error_patterns": [
+      [
+        "ValueError",
+        "int(\"hello\")",
+        "変換エラー",
+        "ZeroDivisionError",
+        "10 / 0",
+        "0で割れません"
+      ],
+      [
+        "TypeError",
+        "\"5\" + 3",
+        "型エラー",
+        "IndexError",
+        "numbers = [1, 2, 3]\nprint(numbers[5])",
+        "範囲外です"
+      ]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_try_except"
+      },
+      {
+        "type": "require_except_handler_count",
+        "min_count": 2
+      },
+      {
+        "type": "require_specific_except",
+        "name_keys": ["error_name1", "error_name2"]
+      }
+    ],
+    "required_keywords": ["try", "except", "print"],
+    "hints": [
+      "exceptを複数書ける",
+      "エラーごとに処理を分ける"
+    ],
+    "explanation": "複数のexceptを書くことで、エラーごとに別の処理ができます。"
+  }
+]

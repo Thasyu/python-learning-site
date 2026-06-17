@@ -1,0 +1,248 @@
+.textbook-body {
+	min-height: 100vh;
+	padding: 30px 18px 36px;
+}
+
+.textbook-shell {
+	width: min(1200px, 100%);
+	margin: 0 auto;
+	display: grid;
+	gap: 20px;
+	animation: fadeInUp var(--transition-slow) both;
+}
+
+.textbook-topbar {
+	margin-bottom: 0;
+}
+
+.brand-wrap {
+	display: grid;
+	gap: 8px;
+}
+
+.textbook-main {
+	display: grid;
+	gap: 20px;
+}
+
+.textbook-hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 18px;
+	padding: 22px;
+}
+
+.textbook-hero-card {
+	display: grid;
+	gap: 14px;
+	align-content: start;
+}
+
+.textbook-hero-card p {
+	max-width: 860px;
+	font-size: 16px;
+}
+
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 6px;
+}
+
+.textbook-section {
+	display: grid;
+	gap: 14px;
+}
+
+.section-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 14px;
+}
+
+.section-head > div {
+	display: grid;
+	gap: 6px;
+}
+
+.section-head p {
+	font-size: 14px;
+}
+
+.chapter-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.chapter-card {
+	position: relative;
+	padding: 18px;
+	border-radius: 20px;
+	border: 1px solid var(--color-border);
+	background: var(--color-surface-strong);
+	box-shadow: var(--shadow-sm);
+	display: grid;
+	gap: 12px;
+	transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.chapter-card:hover {
+	transform: translateY(-2px);
+	border-color: var(--accent-border);
+	box-shadow: 0 20px 40px var(--color-shadow);
+}
+
+.chapter-card.is-coming-soon {
+	opacity: 0.86;
+	background: linear-gradient(180deg, var(--color-surface-strong), var(--color-surface-soft));
+}
+
+.chapter-card-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+.chapter-number {
+	font-family: var(--font-family-mono);
+	color: var(--color-text-muted);
+	font-size: 12px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.chapter-status {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 10px;
+	border-radius: 999px;
+	border: 1px solid var(--color-border);
+	font-size: 11px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--color-text-secondary);
+	background: var(--color-surface-soft);
+}
+
+.chapter-status.is-available {
+	color: var(--color-success-hover);
+	border-color: rgba(38, 208, 168, 0.36);
+	background: rgba(38, 208, 168, 0.12);
+}
+
+.chapter-status.is-coming-soon {
+	color: var(--color-warning-hover);
+	border-color: rgba(255, 179, 71, 0.36);
+	background: rgba(255, 179, 71, 0.12);
+}
+
+.chapter-title {
+	font-size: clamp(18px, 2vw, 22px);
+	line-height: 1.2;
+}
+
+.chapter-description {
+	color: var(--color-text-secondary);
+	font-size: 14px;
+}
+
+.chapter-actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 2px;
+}
+
+.chapter-actions .btn-primary {
+	min-height: 44px;
+	font-size: 14px;
+	min-width: 140px;
+}
+
+.chapter-coming-soon-text {
+	color: var(--color-text-muted);
+	font-size: 13px;
+	font-weight: var(--font-weight-medium);
+}
+
+.textbook-guide {
+	padding: 20px;
+}
+
+.guide-list {
+	display: grid;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+.guide-list li {
+	color: var(--color-text-secondary);
+	font-size: 15px;
+}
+
+.guide-list strong {
+	color: var(--color-text-primary);
+}
+
+.textbook-footer {
+	padding: 18px;
+	border-radius: 22px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+}
+
+.textbook-footer p {
+	margin: 0;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-text-primary);
+}
+
+.footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+@media (max-width: 1080px) {
+	.chapter-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 768px) {
+	.textbook-body {
+		padding: 16px;
+	}
+
+	.section-head {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.chapter-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.textbook-footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.chapter-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.chapter-actions button {
+		width: 100%;
+	}
+}

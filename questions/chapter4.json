@@ -1,0 +1,106 @@
+[
+  {
+    "id": "chapter4_d1_for_range_001",
+    "chapter": 4,
+    "category": "ループ",
+    "difficulty": 1,
+    "generator_type": "for_range_output",
+    "template": "for と range を使って {start} から {end} を出力せよ",
+    "start_min": 0,
+    "start_max": 10,
+    "count_min": 3,
+    "count_max": 6,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["for", "range", "print"],
+    "hints": [
+      "rangeの終わりは含まれない",
+      "for文を書く",
+      "print(i)を使う"
+    ],
+    "explanation": "for文とrangeを使うと、連続した数値を順番に出力できます。"
+  },
+  {
+    "id": "chapter4_d2_for_sum_001",
+    "chapter": 4,
+    "category": "ループ",
+    "difficulty": 2,
+    "generator_type": "for_range_sum",
+    "template": "for と range を使って {start} から {end} の合計を出力せよ",
+    "start_min": 1,
+    "start_max": 5,
+    "count_min": 3,
+    "count_max": 8,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      }
+    ],
+    "required_keywords": ["for", "range", "print"],
+    "hints": [
+      "total = 0 を用意する",
+      "for文の中で足していく",
+      "最後にprint(total)する"
+    ],
+    "explanation": "for文を使うと、繰り返しながら合計を求められます。"
+  },
+  {
+    "id": "chapter4_d3_for_even_sum_001",
+    "chapter": 4,
+    "category": "ループ",
+    "difficulty": 3,
+    "generator_type": "for_even_sum",
+    "template": "for と range を使って {start} から {end} までの偶数の合計を出力せよ",
+    "start_min": 1,
+    "start_max": 10,
+    "count_min": 6,
+    "count_max": 12,
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "For"
+      },
+      {
+        "type": "require_function_call",
+        "name": "range"
+      },
+      {
+        "type": "require_node",
+        "node_type": "If"
+      },
+      {
+        "type": "require_operator",
+        "symbol": "%"
+      }
+    ],
+    "required_keywords": ["for", "range", "if", "%", "print"],
+    "hints": [
+      "total = 0 を用意する",
+      "if i % 2 == 0 で偶数を判定する",
+      "偶数だけtotalに足す"
+    ],
+    "explanation": "for文とif文を組み合わせると、条件に合う値だけ処理できます。"
+  }
+]

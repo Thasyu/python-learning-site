@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン | Python Learning Cloud</title>
+    <link rel="icon" href="../image/main.png" type="image/png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="theme-saas auth-body auth-login">
+    <main class="auth-shell">
+        <section class="auth-hero glass-panel glass-outline">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Python Learning Cloud</span>
+                    <h1 class="hero-title">コードを書く習慣を、プロダクト体験ごと設計する。</h1>
+                    <p>演習、復習、進捗確認をひとつの開発者向けUIに統合。落ち着いた暗色トーンと軽い発光で、学習を毎日開きたくなる雰囲気に寄せています。</p>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>24/7</strong>
+                        <span>いつでも学習再開</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>Review</strong>
+                        <span>復習導線を自動整理</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>Trace</strong>
+                        <span>進捗を視覚化</span>
+                    </div>
+                </div>
+
+                <div class="hero-points">
+                    <div class="hero-point">
+                        <h3>学習を止めないUI</h3>
+                        <p>迷わず再開できる導線と、疲れにくいコントラストで継続しやすくしています。</p>
+                    </div>
+                    <div class="hero-point">
+                        <h3>コードエディタの空気感</h3>
+                        <p>黒ベース、ガラス感、微発光のトーンで、開発者向けサービスらしい印象に寄せています。</p>
+                    </div>
+                </div>
+
+                <div class="hero-rail">
+                    <div class="code-window">
+                        <code>session.restore()
+progress.sync()
+review.queue(priority="smart")
+dashboard.render(mode="focus")</code>
+                    </div>
+                    <div class="auth-status">
+                        <span class="eyebrow">Status</span>
+                        <h3>学習状態を即時に復元</h3>
+                        <p>前回の進捗、復習対象、正答率をログイン後すぐ確認できます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-card card glass-outline">
+            <div class="auth-card-header">
+                <div class="auth-logo">
+                    <img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="auth-logo-img">
+                </div>
+                <span class="eyebrow">Access</span>
+                <h2>アカウントへログイン</h2>
+                <p>保存済みの進捗と復習キューに接続します。</p>
+            </div>
+
+            <form class="auth-form" onsubmit="return false;">
+                <div class="field-group">
+                    <label for="username">ユーザー名またはメールアドレス</label>
+                    <div class="input-shell has-prefix">
+                        <span class="input-prefix">ID</span>
+                        <input type="text" id="username" placeholder="your_name / mail@example.com" autocomplete="username">
+                    </div>
+                    <span class="validation-hint">ユーザー名または登録メールアドレスでログインできます。</span>
+                </div>
+
+                <div class="field-group">
+                    <label for="password">パスワード</label>
+                    <div class="input-shell">
+                        <input type="password" id="password" placeholder="Enter secure password" autocomplete="current-password">
+                        <button type="button" class="password-toggle" data-password-toggle="password" aria-label="パスワード表示切替" aria-pressed="false">SHOW</button>
+                    </div>
+                    <span class="validation-hint">入力欄フォーカス時に発光するので、現在位置を見失いにくくしています。</span>
+                </div>
+
+                <div class="auth-actions">
+                    <button id="loginButton" class="btn-primary" type="button">ログイン</button>
+                </div>
+            </form>
+
+            <div class="auth-links">
+                <a href="forgot-password.html" id="forgotPasswordLink">パスワードを忘れた場合</a>
+                <span class="chip"><span class="pulse-dot"></span> Secure session enabled</span>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="auth-sub-actions">
+                <button id="goRegisterButton" class="btn-success" type="button">新規登録はこちら</button>
+                <button id="homeButton" class="btn-ghost" type="button">ホームへ戻る</button>
+            </div>
+
+            <div class="helper-card">
+                <h3>Sign-in note</h3>
+                <ul class="auth-meta">
+                    <li>ログイン後にダッシュボードで chapter 別の到達度を確認できます。</li>
+                    <li>期限切れトークンは自動で破棄され、再ログインへ戻ります。</li>
+                </ul>
+            </div>
+
+            <p id="message" class="inline-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="../js/common.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

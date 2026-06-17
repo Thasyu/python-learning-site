@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学習進捗ダッシュボード | Python Learning Cloud</title>
+    <link rel="icon" href="../image/main.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="theme-saas dashboard-body">
+    <div class="dashboard-shell">
+        <header class="topbar dashboard-topbar">
+            <div class="dashboard-brand">
+                <div class="brand">
+                    <img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="brand-logo">
+                    <span class="brand-name">Python Learning Cloud</span>
+                </div>
+                <span class="eyebrow">Progress Console</span>
+                <h1>学習進捗ダッシュボード</h1>
+            </div>
+            <div>
+                <span class="user" id="usernameDisplay"></span>
+                <button id="homeButton" class="btn-ghost" type="button">ホーム</button>
+                <button id="startStudyButton" class="btn-primary" type="button">学習する</button>
+            </div>
+        </header>
+
+        <div class="dashboard-message inline-message" id="dashboardMessage" aria-live="polite"></div>
+
+        <section class="dashboard-hero card glass-outline">
+            <div class="dashboard-hero-copy">
+                <span class="eyebrow">Learning Health</span>
+                <h2>継続の指標を、すぐ判断できるUIに整理。</h2>
+                <p id="summary">読み込み中...</p>
+            </div>
+            <div class="dashboard-mini-metrics">
+                <div class="mini-metric">
+                    <span>直近10問の正答率</span>
+                    <strong id="recentAccuracyValue">0%</strong>
+                </div>
+                <div class="mini-metric">
+                    <span>今週の回答数</span>
+                    <strong id="recentWeekValue">0</strong>
+                </div>
+                <div class="mini-metric">
+                    <span>累計連続日数</span>
+                    <strong id="longestStreakValue">0日</strong>
+                </div>
+                <div class="mini-metric">
+                    <span>最終学習</span>
+                    <strong id="lastActivityValue">-</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card card glass-outline accent-cyan">
+                <span class="stat-label">総回答数</span>
+                <strong id="totalAnswersValue">0</strong>
+                <p>演習に触れた累計回数</p>
+            </article>
+            <article class="stat-card card glass-outline accent-blue">
+                <span class="stat-label">正答率</span>
+                <strong id="accuracyValue">0%</strong>
+                <p>全体の安定度を示す指標</p>
+            </article>
+            <article class="stat-card card glass-outline accent-purple">
+                <span class="stat-label">復習キュー</span>
+                <strong id="reviewCountValue">0</strong>
+                <p>次に潰すべき課題数</p>
+            </article>
+            <article class="stat-card card glass-outline accent-green">
+                <span class="stat-label">現在の streak</span>
+                <strong id="streakValue">0日</strong>
+                <p>学習継続の連続日数</p>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="card glass-outline panel-progress">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Chapter Progress</span>
+                        <h3>chapter別の進捗</h3>
+                    </div>
+                    <span class="chip" id="chapterCoverageValue">0 chapter active</span>
+                </div>
+                <ul id="chapter" class="progress-list"></ul>
+            </article>
+
+            <article class="card glass-outline panel-difficulty">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Difficulty Mix</span>
+                        <h3>difficulty別の到達度</h3>
+                    </div>
+                </div>
+                <ul id="difficulty" class="difficulty-list"></ul>
+            </article>
+
+            <article class="card glass-outline panel-chart">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Chart</span>
+                        <h3>chapterごとの正解数</h3>
+                    </div>
+                </div>
+                <div class="chart-wrap">
+                    <canvas id="chapterChart"></canvas>
+                </div>
+            </article>
+
+            <article class="card glass-outline panel-activity">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Recent Activity</span>
+                        <h3>最近の学習</h3>
+                    </div>
+                </div>
+                <ul id="recentActivityList" class="activity-list"></ul>
+            </article>
+
+            <article class="card glass-outline panel-insights">
+                <div class="panel-header">
+                    <div>
+                        <span class="eyebrow">Insights</span>
+                        <h3>次の学習フォーカス</h3>
+                    </div>
+                </div>
+                <div class="insight-stack">
+                    <div class="insight-card">
+                        <span>Focus chapter</span>
+                        <strong id="focusInsight">データを読み込み中...</strong>
+                    </div>
+                    <div class="insight-card">
+                        <span>Review status</span>
+                        <strong id="reviewInsight">復習キューを確認中...</strong>
+                    </div>
+                    <div class="insight-card">
+                        <span>Learning rhythm</span>
+                        <strong id="rhythmInsight">学習テンポを計算中...</strong>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script src="../js/common.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

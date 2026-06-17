@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>教科書 | Python Learning Cloud</title>
+	<link rel="icon" href="../image/main.png" type="image/png">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="textbook.css">
+</head>
+<body class="theme-saas textbook-body">
+	<div class="textbook-shell">
+		<header class="topbar textbook-topbar">
+			<div class="brand-wrap">
+				<a class="brand" href="../pages/index.html" aria-label="Python Learning Cloud ホーム">
+					<img src="../image/main_bg_transparent.png" alt="Python Learning Cloud" class="brand-logo">
+					<span class="brand-name">Python Learning Cloud</span>
+				</a>
+				<span class="eyebrow">Textbook Hub</span>
+			</div>
+			<div class="topbar-actions">
+				<button id="homeButton" class="btn-ghost" type="button">ホーム</button>
+				<button id="dashboardButton" class="btn-secondary" type="button">ダッシュボード</button>
+				<button id="studyButton" class="btn-primary" type="button">学習画面</button>
+				<button id="settingsButton" class="btn-ghost" type="button">設定</button>
+			</div>
+		</header>
+
+		<main class="textbook-main">
+			<section class="textbook-hero card glass-outline">
+				<div class="textbook-hero-card">
+					<span class="eyebrow">Learning by Reading</span>
+					<h1>Pythonを読むように学ぶ。</h1>
+					<p>
+						コードを書く前に、まずは考え方を理解するための教科書です。
+						短い説明、コード例、小さな確認問題を通して、Pythonの基礎を順番に学べます。
+					</p>
+					<div class="hero-actions">
+						<button id="startChapter1Button" class="btn-primary" type="button">Chapter 1 から始める</button>
+						<button id="goStudyFromHeroButton" class="btn-ghost" type="button">学習画面へ移動</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="textbook-section" aria-labelledby="chapterListHeading">
+				<div class="section-head">
+					<div>
+						<span class="eyebrow">Chapters</span>
+						<h2 id="chapterListHeading">chapter 一覧</h2>
+						<p>利用可能な chapter は「読む」から開けます。準備中 chapter は公開までお待ちください。</p>
+					</div>
+					<span id="chapterCountBadge" class="chip">0 chapter</span>
+				</div>
+				<div id="chapterGrid" class="chapter-grid" role="list"></div>
+			</section>
+
+			<section class="textbook-section textbook-guide card glass-outline" aria-labelledby="guideHeading">
+				<div class="section-head">
+					<div>
+						<span class="eyebrow">How To Learn</span>
+						<h2 id="guideHeading">学習の進め方</h2>
+					</div>
+				</div>
+				<ol class="guide-list">
+					<li>
+						<strong>読む:</strong>
+						chapter の説明とコード例を読み、考え方をつかみます。
+					</li>
+					<li>
+						<strong>試す:</strong>
+						学習画面で同じ概念の問題に取り組み、理解を確認します。
+					</li>
+					<li>
+						<strong>戻る:</strong>
+						迷ったら教科書へ戻り、要点を読み直して再挑戦します。
+					</li>
+				</ol>
+			</section>
+		</main>
+
+		<footer class="textbook-footer card glass-outline">
+			<p>Python Learning Cloud Textbook</p>
+			<div class="footer-links">
+				<button id="footerHomeButton" class="btn-ghost" type="button">ホーム</button>
+				<button id="footerDashboardButton" class="btn-ghost" type="button">ダッシュボード</button>
+				<button id="footerStudyButton" class="btn-ghost" type="button">学習画面</button>
+				<button id="footerSettingsButton" class="btn-ghost" type="button">設定</button>
+			</div>
+		</footer>
+	</div>
+
+	<script src="../js/common.js"></script>
+	<script src="textbook.js"></script>
+</body>
+</html>

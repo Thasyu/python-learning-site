@@ -1,0 +1,34 @@
+{
+  "question_fields": [
+    "id",
+    "chapter",
+    "category",
+    "difficulty",
+    "question",
+    "starter_code",
+    "ending_code",
+    "judge_type",
+    "expected_output",
+    "required_keywords",
+    "input_data",
+    "model_answers",
+    "hints",
+    "explanation"
+  ],
+  "result_fields": [
+    "question_id",
+    "chapter",
+    "is_correct",
+    "submitted_code",
+    "actual_output",
+    "answered_at"
+  ],
+  "judge_types": [
+    "output",
+    "output_and_keywords",
+    "random_output_and_keywords",
+    "exact_code",
+    "fix_code",
+    "keyword_only"
+  ]
+}

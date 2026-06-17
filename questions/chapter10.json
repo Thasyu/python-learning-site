@@ -1,0 +1,248 @@
+[
+  {
+    "id": "chapter10_d1_dict_create_one_001",
+    "chapter": 10,
+    "category": "辞書",
+    "difficulty": 1,
+    "generator_type": "dict_create_one",
+    "template": "{key1} が「{value1}」の辞書 {dict_name} を作成し、そのまま出力せよ",
+    "dict_name_candidates": ["user", "data", "item", "profile", "info", "result", "record"],
+    "key_value_pairs": [
+      ["name", "Taro"],
+      ["city", "Tokyo"],
+      ["food", "Apple"],
+      ["lang", "Python"],
+      ["animal", "Cat"],
+      ["hobby", "Game"],
+      ["country", "Japan"],
+      ["sport", "Soccer"],
+      ["book", "Python"],
+      ["music", "Rock"],
+      ["movie", "Avatar"],
+      ["drink", "Coffee"],
+      ["color", "Blue"],
+      ["job", "Engineer"],
+      ["subject", "Math"]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Dict"
+      }
+    ],
+    "required_keywords": ["print", "{"],
+    "hints": ["辞書は {キー: 値} の形で作る"],
+    "explanation": "辞書はキーと値をセットで管理できます。"
+  },
+  {
+    "id": "chapter10_d1_dict_create_two_001",
+    "chapter": 10,
+    "category": "辞書",
+    "difficulty": 1,
+    "generator_type": "dict_create_two",
+    "template": "{key1} が「{value1}」、{key2} が「{value2}」の辞書 {dict_name} を作成し、そのまま出力せよ",
+    "dict_name_candidates": ["user", "data", "item", "profile", "info", "result", "record"],
+    "dict_patterns": [
+      ["name", "Taro", "age", 20],
+      ["city", "Tokyo", "lang", "Python"],
+      ["food", "Apple", "price", 100],
+      ["animal", "Cat", "age", 3],
+      ["hobby", "Game", "level", 5],
+      ["team", "Lions", "score", 10],
+      ["movie", "Titanic", "year", 1997],
+      ["country", "Japan", "capital", "Tokyo"],
+      ["fruit", "Orange", "color", "Orange"],
+      ["car", "Toyota", "speed", 180],
+      ["sport", "Soccer", "players", 11],
+      ["book", "Python", "pages", 300],
+      ["music", "Rock", "volume", 50],
+      ["game", "Mario", "stage", 8],
+      ["drink", "Coffee", "price", 500]
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Dict"
+      }
+    ],
+    "required_keywords": ["print", "{"],
+    "hints": ["キーと値のセットをカンマで区切る"],
+    "explanation": "辞書には複数のキーと値を入れられます。"
+  },
+  {
+    "id": "chapter10_d2_dict_single_operation_001",
+    "chapter": 10,
+    "category": "辞書",
+    "difficulty": 2,
+    "generator_type": "dict_single_operation",
+    "template": "辞書 {dict_name} = {dict_value} に対して {operation_text} を行い、出力せよ",
+    "operation_candidates": ["add", "update", "delete"],
+    "dict_name_candidates": ["user", "data", "item", "profile", "info", "result", "record"],
+    "dict_patterns": [
+      ["name", "Taro", "age", 20],
+      ["city", "Tokyo", "lang", "Python"],
+      ["food", "Apple", "price", 100],
+      ["animal", "Cat", "age", 3],
+      ["hobby", "Game", "level", 5],
+      ["team", "Lions", "score", 10],
+      ["movie", "Titanic", "year", 1997],
+      ["country", "Japan", "capital", "Tokyo"],
+      ["fruit", "Orange", "color", "Orange"],
+      ["car", "Toyota", "speed", 180],
+      ["sport", "Soccer", "players", 11],
+      ["book", "Python", "pages", 300],
+      ["music", "Rock", "volume", 50],
+      ["game", "Mario", "stage", 8],
+      ["drink", "Coffee", "price", 500]
+    ],
+    "add_candidates": [
+      ["hobby", "Game"],
+      ["score", 80],
+      ["color", "Blue"],
+      ["level", 5],
+      ["country", "Japan"],
+      ["animal", "Dog"],
+      ["subject", "Math"],
+      ["job", "Engineer"],
+      ["language", "Python"],
+      ["food", "Sushi"],
+      ["music", "Rock"],
+      ["movie", "Avatar"],
+      ["team", "Lions"],
+      ["speed", 120],
+      ["price", 300]
+    ],
+    "string_update_candidates": [
+      "Jiro",
+      "Osaka",
+      "Orange",
+      "Java",
+      "Dog",
+      "Soccer",
+      "Tokyo",
+      "Python",
+      "Blue",
+      "Coffee"
+    ],
+    "number_update_candidates": [
+      30,
+      50,
+      80,
+      100,
+      200,
+      500,
+      999
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Dict"
+      },
+      {
+        "type": "require_generated_dict_operations",
+        "operation_key": "operation",
+        "object_key": "dict_name"
+      }
+    ],
+    "required_keywords": ["print", "{", "["],
+    "hints": [
+      "追加・変更・削除のどれかを行う",
+      "最後に辞書をprintする"
+    ],
+    "explanation": "辞書はキーを指定して追加・変更・削除できます。"
+  },
+  {
+    "id": "chapter10_d3_dict_double_operation_001",
+    "chapter": 10,
+    "category": "辞書",
+    "difficulty": 3,
+    "generator_type": "dict_double_operation",
+    "template": "辞書 {dict_name} = {dict_value} に対して {operation_text1} と {operation_text2} を順番に行い、出力せよ",
+    "operation_candidates": ["add", "update", "delete"],
+    "dict_name_candidates": ["user", "data", "item", "profile", "info", "result", "record"],
+    "dict_patterns": [
+      ["name", "Taro", "age", 20],
+      ["city", "Tokyo", "lang", "Python"],
+      ["food", "Apple", "price", 100],
+      ["animal", "Cat", "age", 3],
+      ["hobby", "Game", "level", 5],
+      ["team", "Lions", "score", 10],
+      ["movie", "Titanic", "year", 1997],
+      ["country", "Japan", "capital", "Tokyo"],
+      ["fruit", "Orange", "color", "Orange"],
+      ["car", "Toyota", "speed", 180],
+      ["sport", "Soccer", "players", 11],
+      ["book", "Python", "pages", 300],
+      ["music", "Rock", "volume", 50],
+      ["game", "Mario", "stage", 8],
+      ["drink", "Coffee", "price", 500]
+    ],
+    "add_candidates": [
+      ["hobby", "Game"],
+      ["score", 80],
+      ["color", "Blue"],
+      ["level", 5],
+      ["country", "Japan"],
+      ["animal", "Dog"],
+      ["subject", "Math"],
+      ["job", "Engineer"],
+      ["language", "Python"],
+      ["food", "Sushi"],
+      ["music", "Rock"],
+      ["movie", "Avatar"],
+      ["team", "Lions"],
+      ["speed", 120],
+      ["price", 300]
+    ],
+    "string_update_candidates": [
+      "Jiro",
+      "Osaka",
+      "Orange",
+      "Java",
+      "Dog",
+      "Soccer",
+      "Tokyo",
+      "Python",
+      "Blue",
+      "Coffee"
+    ],
+    "number_update_candidates": [
+      30,
+      50,
+      80,
+      100,
+      200,
+      500,
+      999
+    ],
+    "starter_code": "",
+    "ending_code": "",
+    "judge_type": "output_and_ast",
+    "ast_rules": [
+      {
+        "type": "require_node",
+        "node_type": "Dict"
+      },
+      {
+        "type": "require_generated_dict_operations",
+        "operations_key": "operations",
+        "object_key": "dict_name"
+      }
+    ],
+    "required_keywords": ["print", "{", "["],
+    "hints": [
+      "2つの操作を順番に行う",
+      "最後に辞書をprintする"
+    ],
+    "explanation": "辞書操作を複数組み合わせる練習です。"
+  }
+]
