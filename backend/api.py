@@ -77,20 +77,36 @@ from werkzeug.utils import secure_filename
 #問題生成機能のための関数のインポート
 from backend.app.question_generator import generate_question
 
+#.envファイルから環境変数を読み込む
+load_dotenv()
+
 #Flaskアプリケーションの土台を作成
 app = Flask(__name__)
+
+DEFAULT_FRONTEND_ORIGINS = [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "https://thasyu.github.io"
+]
+
+frontend_origins_env = os.getenv("FRONTEND_ORIGINS", "")
+frontend_origins = [
+    origin.strip()
+    for origin in frontend_origins_env.split(",")
+    if origin.strip()
+]
+
+if not frontend_origins:
+    frontend_origins = DEFAULT_FRONTEND_ORIGINS
 
 #CORSを有効にする
 CORS(app, resources={
     r"/*": {
-        "origins": ["http://127.0.0.1:5500"],
+        "origins": frontend_origins,
         "methods": ["GET", "POST", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
     }
 })
-
-#.envファイルから環境変数を読み込む
-load_dotenv()
 
 #ログ出力の設定
 logging.basicConfig(

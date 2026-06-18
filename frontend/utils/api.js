@@ -1,5 +1,33 @@
+const LOCAL_API_BASE_URL = "http://127.0.0.1:5000";
+const DEFAULT_PRODUCTION_API_BASE_URL = "https://python-learning-site-api.onrender.com";
+const API_BASE_URL_OVERRIDE_KEY = "apiBaseUrl";
+
+function normalizeBaseUrl(url) {
+    if (!url || typeof url !== "string") {
+        return "";
+    }
+
+    return url.trim().replace(/\/+$/, "");
+}
+
+function resolveBaseUrl() {
+    const overrideBaseUrl = normalizeBaseUrl(localStorage.getItem(API_BASE_URL_OVERRIDE_KEY));
+    if (overrideBaseUrl) {
+        return overrideBaseUrl;
+    }
+
+    const hostName = window.location.hostname;
+    const isLocalHost = hostName === "127.0.0.1" || hostName === "localhost";
+
+    if (isLocalHost) {
+        return LOCAL_API_BASE_URL;
+    }
+
+    return DEFAULT_PRODUCTION_API_BASE_URL;
+}
+
 //バックエンドAPIの基本URL
-const BASE_URL = "http://127.0.0.1:5000";
+const BASE_URL = resolveBaseUrl();
 
 //ログイン期限切れメッセージを保存するための共通キー名を定義しているコード
 const AUTH_EXPIRED_MESSAGE_KEY = "authExpiredMessage";

@@ -49,3 +49,49 @@ PASSWORD_RESET_PAGE_URL=http://127.0.0.1:5500/pages/reset-password.html
 - SMTP の資格情報をソースコードへ直接書かないでください。
 - `SMTP_PASSWORD` はログ出力しないでください。
 - 本番では `.env` の代わりにシークレット管理サービスの利用を推奨します。
+
+## GitHub Pages + Render 構成
+
+フロントエンドは GitHub Pages、バックエンドAPIは Render で公開する想定です。
+
+### 1. Render 側（Web Service）
+
+- Runtime: Python
+- Build Command: `pip install -r requirements.txt`
+- Start Command: `gunicorn --bind 0.0.0.0:$PORT backend.api:app`
+
+Render の Environment Variables 例:
+
+```env
+FLASK_DEBUG=0
+FRONTEND_ORIGINS=https://thasyu.github.io,http://127.0.0.1:5500,http://localhost:5500
+PASSWORD_RESET_PAGE_URL=https://thasyu.github.io/python-learning-site/pages/reset-password.html
+EMAIL_CHANGE_CONFIRM_PAGE_URL=https://thasyu.github.io/python-learning-site/pages/confirm-email-change.html
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=example@gmail.com
+SMTP_PASSWORD=your_app_password
+SMTP_FROM=example@gmail.com
+```
+
+### 2. フロントエンドのAPI接続先
+
+`frontend/utils/api.js` は以下の動作に変更済みです。
+
+- ローカル表示 (`localhost` / `127.0.0.1`) では `http://127.0.0.1:5000`
+- それ以外（GitHub Pages）では `https://python-learning-site-api.onrender.com`
+
+Render で実際のサービスURLが異なる場合は、`frontend/utils/api.js` の
+`DEFAULT_PRODUCTION_API_BASE_URL` を Render のURLに変更してください。
+
+一時的にブラウザ側で変更したい場合は、開発者コンソールで次を実行できます。
+
+```js
+localStorage.setItem("apiBaseUrl", "https://<your-render-service>.onrender.com")
+```
+
+解除する場合:
+
+```js
+localStorage.removeItem("apiBaseUrl")
+```
