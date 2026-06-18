@@ -8,7 +8,6 @@ import os
 #正規表現を扱うためのモジュールをインポート
 import re
 import hashlib
-import imghdr
 
 #ログを記録するためのモジュールをインポート
 import logging
@@ -168,11 +167,27 @@ ALLOWED_AVATAR_EXTENSIONS = {
     ".jpeg",
     ".webp"
 }
-IMAGE_KIND_TO_EXTENSION = {
-    "png": ".png",
-    "jpeg": ".jpg",
-    "webp": ".webp"
-}
+
+
+def detect_image_extension(file_header):
+    if not isinstance(file_header, (bytes, bytearray)):
+        return None
+
+    # PNG signature
+    if file_header.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+
+    # JPEG signature
+    if file_header.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+
+    # WebP signature: RIFF....WEBP
+    if len(file_header) >= 12 and file_header[:4] == b"RIFF" and file_header[8:12] == b"WEBP":
+        return ".webp"
+
+    return None
+
+
 AVATAR_URL_PREFIX = "/uploads/avatars/"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 AVATAR_UPLOAD_DIR = os.path.join(BASE_DIR, "uploads", "avatars")
@@ -1092,8 +1107,7 @@ def upload_avatar():
 
     file_header = avatar_file.stream.read(512)
     avatar_file.stream.seek(0)
-    detected_kind = imghdr.what(None, file_header)
-    detected_extension = IMAGE_KIND_TO_EXTENSION.get(detected_kind)
+    detected_extension = detect_image_extension(file_header)
 
     if not detected_extension:
         return jsonify({"message": "画像ファイルの形式を確認できませんでした。"}), 400
